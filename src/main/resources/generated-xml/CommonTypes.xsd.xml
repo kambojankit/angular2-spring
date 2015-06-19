@@ -1,0 +1,13 @@
+<com:PriceType xmlns:com="http://www.techarha.com/schema/xsd/common/CommonTypes">
+  <com:price>
+    <com:costPrice>1.051732E7</com:costPrice>
+    <com:procurementPrice>1.051732E7</com:procurementPrice>
+    <com:maintenancePrice>1.051732E7</com:maintenancePrice>
+    <com:profitMargin>1.051732E7</com:profitMargin>
+    <com:sellingPrice>1.051732E7</com:sellingPrice>
+    <com:discount>1.051732E7</com:discount>
+    <com:maxDiscount>1.051732E7</com:maxDiscount>
+    <com:markedPrice>1.051732E7</com:markedPrice>
+  </com:price>
+  <com:currency>INR</com:currency>
+</com:PriceType>

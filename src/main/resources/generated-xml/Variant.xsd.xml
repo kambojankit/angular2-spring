@@ -1,0 +1,32 @@
+<prod:Variant xmlns:prod="http://www.techarha.com/schema/xsd/ecomm/Product" xmlns:com="http://www.techarha.com/schema/xsd/common/CommonTypes">
+  <prod:UniqueIdentifier>
+    <prod:productID>10</prod:productID>
+    <prod:itemID>10</prod:itemID>
+  </prod:UniqueIdentifier>
+  <prod:ProductDetailsType>
+    <prod:thumbnailURI>string</prod:thumbnailURI>
+    <prod:imageURI>string</prod:imageURI>
+    <prod:color>string</prod:color>
+    <prod:size>
+      <com:length>3</com:length>
+      <com:width>3</com:width>
+      <com:height>3</com:height>
+      <com:metrics>mm</com:metrics>
+    </prod:size>
+    <prod:weight>
+      <com:value>3</com:value>
+      <com:metrics>kg</com:metrics>
+    </prod:weight>
+    <prod:capacity>
+      <com:value>3</com:value>
+      <com:metrics>c-cm</com:metrics>
+    </prod:capacity>
+    <prod:style>string</prod:style>
+    <prod:type>string</prod:type>
+  </prod:ProductDetailsType>
+  <prod:ProductCategoryType>
+    <prod:brand>string</prod:brand>
+    <prod:category>string</prod:category>
+    <prod:department>string</prod:department>
+  </prod:ProductCategoryType>
+</prod:Variant>

@@ -1,0 +1,8 @@
+<cat:Catalog xmlns:cat="Inventory.xsd" xmlns:prod="http://www.techarha.com/schema/xsd/ecomm/Product">
+  <prod:UniqueIdentifier>
+    <prod:productID>10</prod:productID>
+    <prod:itemID>10</prod:itemID>
+  </prod:UniqueIdentifier>
+  <cat:quantity>100</cat:quantity>
+  <cat:addedOn>2008-09-29</cat:addedOn>
+</cat:Catalog>

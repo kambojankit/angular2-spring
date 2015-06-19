@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/common/CommonTypes"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.techarha.com/schema/xsd/common/CommonTypes"
+            elementFormDefault="qualified">
+
+    <!-- ****************************************************************
+    ************************ Basic User Type ****************************
+    *********************************************************************-->
+    <xs:complexType name="BasicUserType">
+        <xs:sequence>
+            <xs:element name="name" minOccurs="1" maxOccurs="1" type="NameType"/>
+            <xs:element name="mobile" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="email" minOccurs="1" maxOccurs="1" type="EmailType"/>
+            <xs:element name="address" minOccurs="1" maxOccurs="1" type="AddressType"/>
+            <xs:element name="birthDate" minOccurs="0" maxOccurs="1" type="xs:date"/>
+            <xs:element name="gender" minOccurs="0" maxOccurs="1" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ****************************************************************
+    ***************************** Price Type ****************************
+    *********************************************************************-->
+    <xs:element name="PriceType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="price">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="costPrice" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="procurementPrice" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="maintenancePrice" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="profitMargin" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="sellingPrice" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="discount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="maxDiscount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="markedPrice" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="currency" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="INR"/>
+                            <xs:enumeration value="GBP"/> <!-- GBP: Great Britain Pound -->
+                            <xs:enumeration value="USD"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ****************************************************************
+    **************************** Address Type ***************************
+    *********************************************************************-->
+    <xs:complexType name="AddressType">
+        <xs:sequence>
+            <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="home" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="street" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="city" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="state" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="country" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="pincode" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="contact" minOccurs="0" maxOccurs="1" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ****************************************************************
+    **************************** Name Type ***************************
+    *********************************************************************-->
+    <xs:complexType name="NameType">
+        <xs:sequence>
+            <xs:element name="firstName" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="middleName" minOccurs="0" maxOccurs="1" type="xs:string"/>
+            <xs:element name="lastName" minOccurs="0" maxOccurs="1" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ****************************************************************
+    ***************************** Email Type ****************************
+    *********************************************************************-->
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- ****************************************************************
+    *************************** Size Type *******************************
+    *********************************************************************-->
+    <xs:complexType name="SizeType">
+        <xs:sequence>
+            <xs:element name="length" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="width" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="height" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="metrics" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="mm"/>
+                        <xs:enumeration value="cm"/>
+                        <xs:enumeration value="m"/>
+                        <xs:enumeration value="inches"/>
+                        <xs:enumeration value="ft"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ****************************************************************
+    *************************** Weight Type *****************************
+    *********************************************************************-->
+    <xs:complexType name="WeightType">
+        <xs:sequence>
+            <xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="metrics" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="gm"/>
+                        <xs:enumeration value="kg"/>
+                        <xs:enumeration value="pounds"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ****************************************************************
+    *************************** Capacity Type ***************************
+    *********************************************************************-->
+    <xs:complexType name="CapacityType">
+        <xs:sequence>
+            <xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:int"/>
+            <xs:element name="metrics" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="l"/>
+                        <xs:enumeration value="ml"/>
+                        <xs:enumeration value="c-cm"/> <!-- c-cm means cubic centimeter-->
+                        <xs:enumeration value="c-m"/>
+                        <xs:enumeration value="c-in"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

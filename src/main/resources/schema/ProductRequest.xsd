@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/ecomm/ProductRequest"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:prd="http://www.techarha.com/schema/xsd/ecomm/Product"
+            targetNamespace="http://www.techarha.com/schema/xsd/ecomm/ProductRequest"
+            elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.techarha.com/schema/xsd/ecomm/Product" schemaLocation="Product.xsd"/>
+
+    <xs:element name="addProductDetailsRequest">
+        <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="prd:Product" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="userID" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addVariantDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="prd:Variant" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="userID" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="userID" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateProductDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="prd:Product" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="userID" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateVariantDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="prd:Variant" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="userID" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="
+			http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    <import resource="classpath:MongoDB-context.xml"/>
+
+    <cxf:bus>
+        <cxf:features>
+            <cxf:logging/>
+        </cxf:features>
+    </cxf:bus>
+
+    <bean id="ManageProductsService" class="com.techarha.java.ecomm.services.impl.ManageProductServiceImpl"/>
+
+    <bean id="jsonProvider"
+          class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
+
+    <!--<jaxrs:server id="userManagerREST" address="/UserManager">-->
+        <!--<jaxrs:serviceBeans>-->
+            <!--<ref bean="userManagerService"/>-->
+        <!--</jaxrs:serviceBeans>-->
+        <!--<jaxrs:providers>-->
+            <!--<ref bean='jsonProvider' />-->
+        <!--</jaxrs:providers>-->
+    <!--</jaxrs:server>-->
+
+    <jaxrs:server id="productManagerREST" address="/productManager">
+        <jaxrs:serviceBeans>
+            <ref bean="ManageProductsService"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean='jsonProvider' />
+        </jaxrs:providers>
+    </jaxrs:server>
+
+</beans>

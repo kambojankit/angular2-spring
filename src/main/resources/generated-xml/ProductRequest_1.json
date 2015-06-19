@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productInfoType":{
+      "productName":"Test Name",
+      "productTitle":"Test Title",
+      "description":"Test Description",
+      "shortDescription":"test desc",
+      "ratings":"5"
+    },
+    "productDetailsType": {
+      "thumbnailURI":"test.com",
+      "imageURI":"test.com",
+      "color":"testColor",
+      "size":{
+        "length":11,
+        "width":14,
+        "height":12,
+        "metrics":"mm"
+      },
+      "weight":{
+        "value":1,
+        "metrics":"kg"
+      },
+      "capacity":{
+        "value":3,
+        "metrics":"c-cm"
+      },
+      "brand":"testBrand",
+      "quantityInStock":"2",
+      "material":"polyster",
+      "characters":"TestCharacters",
+      "gender":"male",
+      "type":"testType"
+    },
+    "productCategoryType":{
+      "category":"TestCat",
+      "department":"TestDepart"
+    },
+    "productInventoryType":{
+      "quantity":"3"
+    },
+    "vendorDetailsType":{
+      "vendorID":"12345",
+      "vendorSUK":"234",
+      "vendorSPUC":"12345"
+    }
+  },
+  "userID":"test"
+}

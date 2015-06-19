@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/ecomm/ProductResponse"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:prd="http://www.techarha.com/schema/xsd/ecomm/Product"
+            targetNamespace="http://www.techarha.com/schema/xsd/ecomm/ProductResponse"
+            elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.techarha.com/schema/xsd/ecomm/Product" schemaLocation="Product.xsd"/>
+
+    <xs:element name="pingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addProductDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addVariantDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="prd:Product" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getVariantDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="prd:Variant" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateProductDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateVariantDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prd:UID" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

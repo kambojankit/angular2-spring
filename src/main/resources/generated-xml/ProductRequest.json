@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productInfoType":{
+      "productName": "string",
+      "productTitle": "string",
+      "description": "string",
+      "shortDescription": "string",
+      "ratings": "string"
+    },
+    "productDetailsType": {
+      "thumbnailURI": "String",
+      "imageURI": "String",
+      "color": "String",
+      "size":{
+        "length":3,
+        "width":3,
+        "height":3,
+        "metrics":"mm"
+      },
+      "weight":{
+        "value":3,
+        "metrics":"kg"
+      },
+      "capacity":{
+        "value":3,
+        "metrics":"c-cm"
+      },
+      "brand": "string",
+      "quantityInStock": "string",
+      "material": "string",
+      "characters": "string",
+      "gender": "female",
+      "type": "string"
+    },
+    "productCategoryType":{
+      "category": "string",
+      "department": "string"
+    },
+    "productInventoryType":{
+      "quantity": "string"
+    },
+    "vendorDetailsType":{
+      "vendorID": "string",
+      "vendorSUK": "string",
+      "vendorSPUC": "string"
+    }
+  },
+  "userID": "String"
+}

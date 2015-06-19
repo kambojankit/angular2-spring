@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/ecomm/User"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:cmn="http://www.techarha.com/schema/xsd/common/CommonTypes"
+            targetNamespace="http://www.techarha.com/schema/xsd/ecomm/User"
+            elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.techarha.com/schema/xsd/common/CommonTypes" schemaLocation="CommonTypes.xsd"/>
+
+    <xs:element name="User">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:BasicUserType">
+                    <xs:sequence>
+                        <xs:element name="userID" minOccurs="1" maxOccurs="1" type="xs:integer"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Vendor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vendorID" minOccurs="1" maxOccurs="1" type="xs:integer"/>
+                <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                <xs:element name="relatedSince" minOccurs="1" maxOccurs="1" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

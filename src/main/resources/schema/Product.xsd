@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/ecomm/Product"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:cmn="http://www.techarha.com/schema/xsd/common/CommonTypes"
+            targetNamespace="http://www.techarha.com/schema/xsd/ecomm/Product"
+            elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.techarha.com/schema/xsd/common/CommonTypes" schemaLocation="CommonTypes.xsd"/>
+
+    <!-- ****************************************************************
+    ***************************** Product *******************************
+    *********************************************************************-->
+    <xs:element name="Product">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ProductInfoType" minOccurs="1"/>
+                <xs:element ref="ProductDetailsType" minOccurs="1"/>
+                <xs:element ref="ProductCategoryType" minOccurs="1"/>
+                <xs:element ref="ProductInventoryType" minOccurs="1"/>
+                <xs:element ref="VendorDetailsType" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ****************************************************************
+    ***************************** Variant *******************************
+    *********************************************************************-->
+    <xs:element name="Variant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ProductDetailsType" minOccurs="1"/>
+                <xs:element ref="ProductInventoryType" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ****************************************************************
+    ************************ Product Information ************************
+    *********************************************************************-->
+    <xs:element name="UID">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productID" type="xs:long"/>
+                <xs:element name="variantID" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductInfoType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productName" type="xs:string"/>
+                <xs:element name="productTitle" type="xs:string"/>
+                <xs:element name="description" type="xs:string"/>
+                <xs:element name="shortDescription" type="xs:string"/>
+                <xs:element name="ratings" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductDetailsType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="thumbnailURI" type="xs:string"/>
+                <xs:element name="imageURI" type="xs:string"/>
+                <xs:element name="color" type="xs:string"/>
+                <xs:element name="size" type="cmn:SizeType"/>
+                <xs:element name="weight" type="cmn:WeightType"/>
+                <xs:element name="capacity" type="cmn:CapacityType"/>
+
+                <xs:element name="brand" type="xs:string"/>
+                <xs:element name="quantityInStock" type="xs:string"/>
+
+                <xs:element name="material" type="xs:string"/>
+                <xs:element name="characters" type="xs:string"/> <!-- Characters on the bag like ben10 etc-->
+                <xs:element name="gender">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="female"/>
+                            <xs:enumeration value="male"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="type" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductCategoryType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="category" type="xs:string"/>
+                <xs:element name="department" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductInventoryType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="quantity" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="VendorDetailsType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vendorID" type="xs:string"/>
+                <xs:element name="vendorSUK" type="xs:string"/>
+                <xs:element name="vendorSPUC" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
