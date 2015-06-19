@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by ankit on 29/03/15.
  */
-@Component
+//@Component
 public class MyDatabase {
     private String dbName;
 
