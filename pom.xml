@@ -150,6 +150,8 @@
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryRequest=com.techarha.java.manin.request</schemaPackagename>
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/ProductResponse=com.techarha.java.manin.response</schemaPackagename>
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryResponse=com.techarha.java.manin.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserRequest=com.techarha.java.manin.request</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserResponse=com.techarha.java.manin.response</schemaPackagename>
                                             </schemaPackagenames>
                                         </wadlOption>
                                     </wadlOptions>

@@ -16,7 +16,7 @@ import com.techarha.java.manin.request.UpdateVariantDetailsRequest;
 import com.techarha.java.manin.response.AddProductDetailsResponse;
 import com.techarha.java.manin.response.AddVariantDetailsResponse;
 import com.techarha.java.manin.response.GetProductDetailsResponse;
-import com.techarha.java.manin.response.PingResponse;
+import com.techarha.java.manin.response.PingProductResponse;
 import com.techarha.java.manin.response.UpdateProductDetailsResponse;
 import com.techarha.java.manin.response.UpdateVariantDetailsResponse;
 
@@ -67,6 +67,6 @@ public interface ManageProductsService {
     @GET
     @Produces("application/json")
     @Path("/ping")
-    PingResponse ping();
+    PingProductResponse ping();
 
 }

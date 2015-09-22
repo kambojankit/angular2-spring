@@ -2,89 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e25363-4b13-471a-acfa-6651c701ad65" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/schema/UserRequest.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/schema/UserResponse.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/business/ManageProductCatalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/business/ManageProductCatalog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/business/impl/ManageProductCatalogImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/business/impl/ManageProductCatalogImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/dao/ProductInfoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/dao/ProductInfoDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/dao/UserManagerDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/dao/UserManagerDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/dao/impl/ProductInfoDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/dao/impl/ProductInfoDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/dao/impl/UserManagerDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/dao/impl/UserManagerDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/Lifecycle.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/Lifecycle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/ManufacturerDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/ManufacturerDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/Pricing.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/Pricing.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/ProductInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/ProductInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/ShippingDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/ShippingDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/domain/Variant.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/domain/Variant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/Product.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/ProductCategoryType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ProductCategoryType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/ProductDetailsType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ProductDetailsType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/ProductInfoType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ProductInfoType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/ProductInventoryType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ProductInventoryType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/UID.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/UID.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/Variant.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/Variant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/VendorDetailsType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/VendorDetailsType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/AddressType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/AddressType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/BasicUserType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/BasicUserType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/CapacityType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/CapacityType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/NameType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/NameType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/PriceType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/PriceType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/SizeType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/SizeType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/WeightType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/WeightType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/common/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/model/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/pojo/MyDatabase.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/pojo/MyDatabase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/pojo/Size.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/pojo/Size.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/pojo/Weight.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/pojo/Weight.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/AddProductDetailsRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/AddProductDetailsRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/AddProductRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/AddProductRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/AddToStockRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/AddToStockRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/AddVariantDetailsRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/AddVariantDetailsRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/AddVariantRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/AddVariantRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/GetProductDetailsRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/GetProductDetailsRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/GetProductRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/GetProductRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/ManageCatalogRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/ManageCatalogRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/RemoveFromStockRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/RemoveFromStockRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/UpdateProductDetailsRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/UpdateProductDetailsRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/UpdateVariantDetailsRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/UpdateVariantDetailsRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/UserRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/UserRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/request/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/AddProductDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/AddProductDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/AddProductResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/AddProductResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/AddVariantDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/AddVariantDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/AddVariantResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/AddVariantResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/GetProductDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/GetProductDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/GetProductResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/GetProductResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/GetProductVariantDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/GetProductVariantDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/GetVariantDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/GetVariantDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/ManageCatalogResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/ManageCatalogResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/PingResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/PingResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/StockResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/StockResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/UpdateProductDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/UpdateProductDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/UpdateVariantDetailsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/UpdateVariantDetailsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/UserResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/UserResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/response/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/services/ManageProductsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/ManageProductsService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/services/impl/ManageProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/ManageProductServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/validator/ManageCatalogRequestValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/validator/ManageCatalogRequestValidator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/ecomm/validator/impl/ManageCatalogRequestValidatorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/validator/impl/ManageCatalogRequestValidatorImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/Wadl/EcommService.wadl" afterPath="$PROJECT_DIR$/src/main/resources/Wadl/manin-core.wadl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/CommonTypes.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/CommonTypes.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/InventoryRequest.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/InventoryRequest.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/InventoryResponse.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/InventoryResponse.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/MongoDB-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/MongoDB-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/Product.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/Product.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/ProductRequest.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/ProductRequest.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/ProductResponse.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/ProductResponse.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/schema/User.xsd" afterPath="$PROJECT_DIR$/src/main/resources/schema/User.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/UserManagementServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/BasicUserType.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/BasicUserType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/ManageProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/ManageProductServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/ManageProductsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/ManageProductsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/model/common/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/response/ObjectFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rest-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/rest-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="manin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,48 +57,14 @@
     <favorites_list name="manin" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="manin-core.wadl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Wadl/manin-core.wadl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2173913">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/schema/User.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="32" selection-start-line="11" selection-start-column="12" selection-end-line="17" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserResponse.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/schema/UserResponse.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="38" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRequest.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/schema/UserRequest.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -192,12 +87,16 @@
         <option value="$PROJECT_DIR$/src/main/resources/schema/InventoryResponse.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/schema/InventoryRequest.xsd" />
         <option value="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/business/ManageProductCatalog.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/schema/UserRequest.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/schema/CommonTypes.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/schema/UserResponse.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/schema/ProductResponse.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/Wadl/manin-core.wadl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/UserManagementService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/UserManagementServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/rest-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/ManageProductServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -225,7 +124,7 @@
     <option name="width" value="1366" />
     <option name="height" value="741" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -266,82 +165,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schema" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -367,28 +190,33 @@
     <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.bitbucket" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     <property name="dynamic.classpath" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/schema" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.techarha.java.manin.services.impl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/generated-xml" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.GenerateSources-manin">
+  <component name="RunManager" selected="JBoss Server.ManIn @ JBOSS 7">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -552,6 +380,20 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="SERVER" value="" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -654,10 +496,76 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="openshift-deploy" factoryName="OpenShift Deployment">
+      <method />
+    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="ManIn @ JBOSS 7" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 7.1.1.Final" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59529" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method />
     </configuration>
     <configuration default="false" name="package-manin" type="MavenRunConfiguration" factoryName="Maven">
@@ -715,9 +623,23 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Maven.package-manin" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.GenerateSources-manin" />
+    <configuration default="false" name="OpenShift Deployment" type="openshift-deploy" factoryName="OpenShift Deployment" singleton="true" server-name="OpenShift-ABS">
+      <deployment type="artifact" name="manin">
+        <settings>
+          <option name="repositoryPath" value="$USER_HOME$/Library/Caches/IntelliJIdea14/cloud-git-artifact-deploy/manin.war" />
+        </settings>
+      </deployment>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="manin" />
+        </option>
+      </method>
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="JBoss Server.ManIn @ JBOSS 7" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.package-manin" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.GenerateSources-manin" />
+      <item index="3" class="java.lang.String" itemvalue="OpenShift Deployment.OpenShift Deployment" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -736,16 +658,16 @@
       <workItem from="1441045912554" duration="29000" />
       <workItem from="1441045965785" duration="1752000" />
       <workItem from="1442846563505" duration="3241000" />
-      <workItem from="1442929793662" duration="6636000" />
+      <workItem from="1442929793662" duration="8768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12860000" />
+    <option name="totallyTimeSpent" value="14992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -758,24 +680,24 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -919,28 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.openshift/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.openshift/config/standalone.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.869565">
           <caret line="114" column="51" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/ManageProductsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -971,14 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rest-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1058,14 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="155" column="48" selection-start-line="155" selection-start-column="48" selection-end-line="155" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/generated-xml/updateUserRequest.xsd.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.048309177">
@@ -1122,14 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema/User.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="32" selection-start-line="11" selection-start-column="12" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/schema/ProductResponse.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1138,26 +1018,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema/UserRequest.xsd">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema/User.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.36231884">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/schema/UserResponse.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.6376812">
           <caret line="67" column="38" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema/UserRequest.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5675676">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Wadl/manin-core.wadl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2173913">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.7371007">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/GetUserDetailsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17936118">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/AddUserRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2948403">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/request/UpdateUserDetailsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33169532">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/UserManagementServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33169532">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/impl/ManageProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9262899">
+          <caret line="126" column="8" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="20" />
+          <folding>
+            <element signature="e#4531#4532#0" expanded="true" />
+            <element signature="e#4558#4559#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.openshift/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.118421055">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/ManageProductsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7051597">
+          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techarha/java/manin/services/UserManagementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22113022">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rest-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5110565">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.36855036">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1216,7 +1190,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|manin</last-edited>
+          <last-edited>manin</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

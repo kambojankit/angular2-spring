@@ -30,43 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Product }
-     * 
-     */
-    public Product createProduct() {
-        return new Product();
-    }
-
-    /**
-     * Create an instance of {@link ProductInventoryType }
-     * 
-     */
-    public ProductInventoryType createProductInventoryType() {
-        return new ProductInventoryType();
-    }
-
-    /**
-     * Create an instance of {@link Variant }
-     * 
-     */
-    public Variant createVariant() {
-        return new Variant();
-    }
-
-    /**
      * Create an instance of {@link VendorDetailsType }
      * 
      */
     public VendorDetailsType createVendorDetailsType() {
         return new VendorDetailsType();
-    }
-
-    /**
-     * Create an instance of {@link ProductCategoryType }
-     * 
-     */
-    public ProductCategoryType createProductCategoryType() {
-        return new ProductCategoryType();
     }
 
     /**
@@ -78,6 +46,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UID }
+     * 
+     */
+    public UID createUID() {
+        return new UID();
+    }
+
+    /**
+     * Create an instance of {@link Variant }
+     * 
+     */
+    public Variant createVariant() {
+        return new Variant();
+    }
+
+    /**
+     * Create an instance of {@link Product }
+     * 
+     */
+    public Product createProduct() {
+        return new Product();
+    }
+
+    /**
+     * Create an instance of {@link User }
+     * 
+     */
+    public User createUser() {
+        return new User();
+    }
+
+    /**
+     * Create an instance of {@link ProductInventoryType }
+     * 
+     */
+    public ProductInventoryType createProductInventoryType() {
+        return new ProductInventoryType();
+    }
+
+    /**
      * Create an instance of {@link ProductDetailsType }
      * 
      */
@@ -86,11 +94,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UID }
+     * Create an instance of {@link ProductCategoryType }
      * 
      */
-    public UID createUID() {
-        return new UID();
+    public ProductCategoryType createProductCategoryType() {
+        return new ProductCategoryType();
+    }
+
+    /**
+     * Create an instance of {@link Vendor }
+     * 
+     */
+    public Vendor createVendor() {
+        return new Vendor();
     }
 
 }

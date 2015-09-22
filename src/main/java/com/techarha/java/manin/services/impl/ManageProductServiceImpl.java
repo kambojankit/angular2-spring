@@ -123,9 +123,8 @@ public class ManageProductServiceImpl implements ManageProductsService{
     }
 
     @Override
-    public PingResponse ping() {
-        PingResponse pingResponse = new PingResponse();
-        pingResponse.setResult("Successful");
-        return pingResponse;
+    public PingProductResponse ping() {
+        return null;
     }
+
 }

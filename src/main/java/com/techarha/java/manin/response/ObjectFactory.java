@@ -30,11 +30,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StockResponse }
+     * Create an instance of {@link PingUserResponse }
      * 
      */
-    public StockResponse createStockResponse() {
-        return new StockResponse();
+    public PingUserResponse createPingUserResponse() {
+        return new PingUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUserDetailsResponse }
+     * 
+     */
+    public UpdateUserDetailsResponse createUpdateUserDetailsResponse() {
+        return new UpdateUserDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateVariantDetailsResponse }
+     * 
+     */
+    public UpdateVariantDetailsResponse createUpdateVariantDetailsResponse() {
+        return new UpdateVariantDetailsResponse();
     }
 
     /**
@@ -54,19 +70,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateVariantDetailsResponse }
+     * Create an instance of {@link GetUserDetailsResponse }
      * 
      */
-    public UpdateVariantDetailsResponse createUpdateVariantDetailsResponse() {
-        return new UpdateVariantDetailsResponse();
+    public GetUserDetailsResponse createGetUserDetailsResponse() {
+        return new GetUserDetailsResponse();
     }
 
     /**
-     * Create an instance of {@link PingResponse }
+     * Create an instance of {@link GetAllUsersResponse }
      * 
      */
-    public PingResponse createPingResponse() {
-        return new PingResponse();
+    public GetAllUsersResponse createGetAllUsersResponse() {
+        return new GetAllUsersResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetVariantDetailsResponse }
+     * 
+     */
+    public GetVariantDetailsResponse createGetVariantDetailsResponse() {
+        return new GetVariantDetailsResponse();
     }
 
     /**
@@ -86,11 +110,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetVariantDetailsResponse }
+     * Create an instance of {@link RemoveUserResponse }
      * 
      */
-    public GetVariantDetailsResponse createGetVariantDetailsResponse() {
-        return new GetVariantDetailsResponse();
+    public RemoveUserResponse createRemoveUserResponse() {
+        return new RemoveUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddUserResponse }
+     * 
+     */
+    public AddUserResponse createAddUserResponse() {
+        return new AddUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link StockResponse }
+     * 
+     */
+    public StockResponse createStockResponse() {
+        return new StockResponse();
+    }
+
+    /**
+     * Create an instance of {@link PingProductResponse }
+     * 
+     */
+    public PingProductResponse createPingProductResponse() {
+        return new PingProductResponse();
     }
 
 }

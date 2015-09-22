@@ -11,7 +11,6 @@
 
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
-    <import resource="classpath:MongoDB-context.xml"/>
 
     <cxf:bus>
         <cxf:features>
@@ -20,6 +19,8 @@
     </cxf:bus>
 
     <bean id="ManageProductsService" class="com.techarha.java.manin.services.impl.ManageProductServiceImpl"/>
+
+    <bean id="UserManagementService" class="com.techarha.java.manin.services.impl.UserManagementServiceImpl"/>
 
     <bean id="jsonProvider"
           class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
@@ -33,9 +34,9 @@
         <!--</jaxrs:providers>-->
     <!--</jaxrs:server>-->
 
-    <jaxrs:server id="productManagerREST" address="/productManager">
+    <jaxrs:server id="productManagerREST" address="/managers">
         <jaxrs:serviceBeans>
-            <ref bean="ManageProductsService"/>
+            <ref bean="UserManagementService"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <ref bean='jsonProvider' />

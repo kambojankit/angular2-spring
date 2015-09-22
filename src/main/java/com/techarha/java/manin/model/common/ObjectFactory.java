@@ -30,27 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SizeType }
-     * 
-     */
-    public SizeType createSizeType() {
-        return new SizeType();
-    }
-
-    /**
      * Create an instance of {@link NameType }
      * 
      */
     public NameType createNameType() {
         return new NameType();
-    }
-
-    /**
-     * Create an instance of {@link BasicUserType }
-     * 
-     */
-    public BasicUserType createBasicUserType() {
-        return new BasicUserType();
     }
 
     /**
@@ -62,6 +46,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SizeType }
+     * 
+     */
+    public SizeType createSizeType() {
+        return new SizeType();
+    }
+
+    /**
      * Create an instance of {@link AddressType }
      * 
      */
@@ -70,11 +62,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link WeightType }
+     * Create an instance of {@link PingResponse }
      * 
      */
-    public WeightType createWeightType() {
-        return new WeightType();
+    public PingResponse createPingResponse() {
+        return new PingResponse();
+    }
+
+    /**
+     * Create an instance of {@link ResponseType }
+     * 
+     */
+    public ResponseType createResponseType() {
+        return new ResponseType();
+    }
+
+    /**
+     * Create an instance of {@link PriceType }
+     * 
+     */
+    public PriceType createPriceType() {
+        return new PriceType();
     }
 
     /**
@@ -86,11 +94,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PriceType }
+     * Create an instance of {@link BasicUserType }
      * 
      */
-    public PriceType createPriceType() {
-        return new PriceType();
+    public BasicUserType createBasicUserType() {
+        return new BasicUserType();
+    }
+
+    /**
+     * Create an instance of {@link WeightType }
+     * 
+     */
+    public WeightType createWeightType() {
+        return new WeightType();
     }
 
 }
