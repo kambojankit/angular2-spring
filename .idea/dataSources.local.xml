@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - manin@openshift" uuid="81b7a0f3-61ed-4142-a4fa-ccc3379d0456">
+      <secret-storage>master_key</secret-storage>
+      <user-name>adminHvPN7Sr</user-name>
+      <schema-pattern>manin.*</schema-pattern>
+      <default-schemas>manin.*</default-schemas>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>manin-arhatech.rhcloud.com</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>556dbf6e4382ecc73b000098</user>
+        <use-password>false</use-password>
+        <private-key-path>$USER_HOME$/.ssh/id_rsa</private-key-path>
+      </ssh-properties>
+    </data-source>
+    <data-source name="MySQL - @localhost" uuid="6715a831-6cf9-4215-81c3-4b77db8df980">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>manin.*</schema-pattern>
+      <default-schemas>test.*</default-schemas>
+    </data-source>
+  </component>
+</project>

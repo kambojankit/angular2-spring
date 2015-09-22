@@ -1,0 +1,96 @@
+
+package com.techarha.java.manin.model.common;
+
+import javax.xml.bind.annotation.XmlRegistry;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the com.techarha.java.manin.model.common package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.techarha.java.manin.model.common
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link SizeType }
+     * 
+     */
+    public SizeType createSizeType() {
+        return new SizeType();
+    }
+
+    /**
+     * Create an instance of {@link NameType }
+     * 
+     */
+    public NameType createNameType() {
+        return new NameType();
+    }
+
+    /**
+     * Create an instance of {@link BasicUserType }
+     * 
+     */
+    public BasicUserType createBasicUserType() {
+        return new BasicUserType();
+    }
+
+    /**
+     * Create an instance of {@link PriceType.Price }
+     * 
+     */
+    public PriceType.Price createPriceTypePrice() {
+        return new PriceType.Price();
+    }
+
+    /**
+     * Create an instance of {@link AddressType }
+     * 
+     */
+    public AddressType createAddressType() {
+        return new AddressType();
+    }
+
+    /**
+     * Create an instance of {@link WeightType }
+     * 
+     */
+    public WeightType createWeightType() {
+        return new WeightType();
+    }
+
+    /**
+     * Create an instance of {@link CapacityType }
+     * 
+     */
+    public CapacityType createCapacityType() {
+        return new CapacityType();
+    }
+
+    /**
+     * Create an instance of {@link PriceType }
+     * 
+     */
+    public PriceType createPriceType() {
+        return new PriceType();
+    }
+
+}

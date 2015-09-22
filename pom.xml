@@ -139,17 +139,17 @@
                                     <wadlOptions>
                                         <wadlOption>
                                             <wadl>
-                                                ${basedir}/src/main/resources/Wadl/EcommService.wadl
+                                                ${basedir}/src/main/resources/Wadl/manin-core.wadl
                                             </wadl>
-                                            <packagename>com.techarha.java.ecomm.services</packagename>
+                                            <packagename>com.techarha.java.manin.services</packagename>
                                             <schemaPackagenames>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/common/CommonTypes=com.techarha.java.ecomm.model.common</schemaPackagename>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/ecomm/User=com.techarha.java.ecomm.model</schemaPackagename>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/ecomm/Product=com.techarha.java.ecomm.model</schemaPackagename>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/ecomm/ProductRequest=com.techarha.java.ecomm.request</schemaPackagename>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/ecomm/InventoryRequest=com.techarha.java.ecomm.request</schemaPackagename>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/ecomm/ProductResponse=com.techarha.java.ecomm.response</schemaPackagename>
-                                                <schemaPackagename>http://www.techarha.com/schema/xsd/ecomm/InventoryResponse=com.techarha.java.ecomm.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/common/CommonTypes=com.techarha.java.manin.model.common</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/User=com.techarha.java.manin.model</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/Product=com.techarha.java.manin.model</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/ProductRequest=com.techarha.java.manin.request</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryRequest=com.techarha.java.manin.request</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/ProductResponse=com.techarha.java.manin.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryResponse=com.techarha.java.manin.response</schemaPackagename>
                                             </schemaPackagenames>
                                         </wadlOption>
                                     </wadlOptions>

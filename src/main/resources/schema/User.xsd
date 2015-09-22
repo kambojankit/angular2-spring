@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<xs:schema  xmlns="http://www.techarha.com/schema/xsd/ecomm/User"
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/manin/User"
             xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:cmn="http://www.techarha.com/schema/xsd/common/CommonTypes"
-            targetNamespace="http://www.techarha.com/schema/xsd/ecomm/User"
+            targetNamespace="http://www.techarha.com/schema/xsd/manin/User"
             elementFormDefault="qualified">
 
     <xs:import namespace="http://www.techarha.com/schema/xsd/common/CommonTypes" schemaLocation="CommonTypes.xsd"/>

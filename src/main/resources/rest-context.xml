@@ -19,7 +19,7 @@
         </cxf:features>
     </cxf:bus>
 
-    <bean id="ManageProductsService" class="com.techarha.java.ecomm.services.impl.ManageProductServiceImpl"/>
+    <bean id="ManageProductsService" class="com.techarha.java.manin.services.impl.ManageProductServiceImpl"/>
 
     <bean id="jsonProvider"
           class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>

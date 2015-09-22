@@ -148,4 +148,22 @@
         </xs:sequence>
     </xs:complexType>
 
+    <!-- ****************************************************************
+    *************************** Response Type ***************************
+    *********************************************************************-->
+    <xs:complexType name="ResponseType">
+        <xs:sequence>
+            <xs:element name="error" minOccurs="0" maxOccurs="1" type="xs:int"/>
+            <xs:element name="code" minOccurs="1" maxOccurs="1" type="xs:integer"/>
+            <xs:element name="message" minOccurs="0" maxOccurs="1" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pingResponse">
+        <xs:sequence>
+            <xs:element name="result" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+
 </xs:schema>

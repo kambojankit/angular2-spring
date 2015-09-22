@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="manin">
+    <output-path>$PROJECT_DIR$/classes/artifacts/manin</output-path>
+    <root id="archive" name="manin.war" />
+  </artifact>
+</component>

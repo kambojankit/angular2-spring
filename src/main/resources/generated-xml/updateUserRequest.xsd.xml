@@ -1,0 +1,30 @@
+<user:updateUserDetailsRequest xmlns:user="http://www.techarha.com/schema/xsd/manin/UserRequest" xmlns:user1="http://www.techarha.com/schema/xsd/manin/User" xmlns:com="http://www.techarha.com/schema/xsd/common/CommonTypes">
+  <user:type>string</user:type>
+  <user1:User>
+    <com:name>
+      <com:firstName>string</com:firstName>
+      <!--Optional:-->
+      <com:middleName>string</com:middleName>
+      <!--Optional:-->
+      <com:lastName>string</com:lastName>
+    </com:name>
+    <com:mobile>3</com:mobile>
+    <com:email>string</com:email>
+    <com:address>
+      <com:name>string</com:name>
+      <com:home>string</com:home>
+      <com:street>string</com:street>
+      <com:city>string</com:city>
+      <com:state>string</com:state>
+      <com:country>string</com:country>
+      <com:pincode>3</com:pincode>
+      <!--Optional:-->
+      <com:contact>3</com:contact>
+    </com:address>
+    <!--Optional:-->
+    <com:birthDate>2008-09-29</com:birthDate>
+    <!--Optional:-->
+    <com:gender>string</com:gender>
+    <user1:userID>100</user1:userID>
+  </user1:User>
+</user:updateUserDetailsRequest>

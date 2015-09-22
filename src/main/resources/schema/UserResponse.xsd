@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/manin/UserResponse"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:usr="http://www.techarha.com/schema/xsd/manin/User"
+            xmlns:cmn="http://www.techarha.com/schema/xsd/common/CommonTypes"
+            targetNamespace="http://www.techarha.com/schema/xsd/manin/UserResponse"
+            elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.techarha.com/schema/xsd/manin/User" schemaLocation="User.xsd"/>
+
+    <xs:element name="addUserResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:ResponseType">
+                    <xs:sequence>
+                        <xs:element ref="usr:User" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateUserDetailsResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:ResponseType">
+                    <xs:sequence>
+                        <xs:element ref="usr:User" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserDetailsResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:ResponseType">
+                    <xs:sequence>
+                        <xs:element ref="usr:User" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllUsersResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:ResponseType">
+                    <xs:sequence>
+                        <xs:element ref="usr:User" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="removeUserResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:ResponseType">
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pingUserResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cmn:pingResponse">
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
