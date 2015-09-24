@@ -11,6 +11,13 @@
 
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    <import resource="MySql-context.xml"/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>db.properties</value>
+        </property>
+    </bean>
 
     <cxf:bus>
         <cxf:features>

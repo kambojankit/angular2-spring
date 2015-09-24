@@ -30,11 +30,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NameType }
+     * Create an instance of {@link PriceType }
      * 
      */
-    public NameType createNameType() {
-        return new NameType();
+    public PriceType createPriceType() {
+        return new PriceType();
+    }
+
+    /**
+     * Create an instance of {@link SizeType }
+     * 
+     */
+    public SizeType createSizeType() {
+        return new SizeType();
+    }
+
+    /**
+     * Create an instance of {@link WeightType }
+     * 
+     */
+    public WeightType createWeightType() {
+        return new WeightType();
+    }
+
+    /**
+     * Create an instance of {@link CapacityType }
+     * 
+     */
+    public CapacityType createCapacityType() {
+        return new CapacityType();
     }
 
     /**
@@ -46,11 +70,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SizeType }
+     * Create an instance of {@link ResponseType }
      * 
      */
-    public SizeType createSizeType() {
-        return new SizeType();
+    public ResponseType createResponseType() {
+        return new ResponseType();
+    }
+
+    /**
+     * Create an instance of {@link NameType }
+     * 
+     */
+    public NameType createNameType() {
+        return new NameType();
+    }
+
+    /**
+     * Create an instance of {@link BasicUserType }
+     * 
+     */
+    public BasicUserType createBasicUserType() {
+        return new BasicUserType();
     }
 
     /**
@@ -67,46 +107,6 @@ public class ObjectFactory {
      */
     public PingResponse createPingResponse() {
         return new PingResponse();
-    }
-
-    /**
-     * Create an instance of {@link ResponseType }
-     * 
-     */
-    public ResponseType createResponseType() {
-        return new ResponseType();
-    }
-
-    /**
-     * Create an instance of {@link PriceType }
-     * 
-     */
-    public PriceType createPriceType() {
-        return new PriceType();
-    }
-
-    /**
-     * Create an instance of {@link CapacityType }
-     * 
-     */
-    public CapacityType createCapacityType() {
-        return new CapacityType();
-    }
-
-    /**
-     * Create an instance of {@link BasicUserType }
-     * 
-     */
-    public BasicUserType createBasicUserType() {
-        return new BasicUserType();
-    }
-
-    /**
-     * Create an instance of {@link WeightType }
-     * 
-     */
-    public WeightType createWeightType() {
-        return new WeightType();
     }
 
 }

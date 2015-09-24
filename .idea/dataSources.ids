@@ -11,17 +11,26 @@
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="value" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="metric_unit" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="product_ibfk_3" table="product" schema="" catalog="manin" columns="id"/>
     </table>
     <table name="category" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="dept_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="category_ibfk_1" columns="dept_id" ref-table="department" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="product_ibfk_7" table="product" schema="" catalog="manin" columns="category"/>
+      <index name="department_idx" unique="false" columns="dept_id"/>
     </table>
     <table name="department" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="category_ibfk_1" table="category" schema="" catalog="manin" columns="dept_id"/>
+      <exported-key name="product_ibfk_6" table="product" schema="" catalog="manin" columns="department"/>
     </table>
     <table name="pricing" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -35,6 +44,11 @@
       <column name="marked_price" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
       <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="pricing_ibfk_1" columns="created_by" ref-table="user" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="product_ibfk_8" table="product" schema="" catalog="manin" columns="price_id"/>
+      <exported-key name="variant_ibfk_2" table="variant" schema="" catalog="manin" columns="price_id"/>
+      <index name="user_idx" unique="false" columns="created_by"/>
     </table>
     <table name="product" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -60,6 +74,20 @@
       <column name="sku" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="variant_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="price_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="product_ibfk_1" columns="id" ref-table="size" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_2" columns="id" ref-table="weight" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_3" columns="id" ref-table="capacity" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_4" columns="created_by" ref-table="user" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_5" columns="variant_id" ref-table="variant" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_6" columns="department" ref-table="department" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_7" columns="category" ref-table="category" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="product_ibfk_8" columns="price_id" ref-table="pricing" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="category_idx" unique="false" columns="category"/>
+      <index name="department_idx" unique="false" columns="department"/>
+      <index name="pricing_idx" unique="false" columns="price_id"/>
+      <index name="user_idx" unique="false" columns="created_by"/>
+      <index name="variant_idx" unique="false" columns="variant_id"/>
     </table>
     <table name="size" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -67,6 +95,8 @@
       <column name="breadth" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="height" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="metric_unit" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="product_ibfk_1" table="product" schema="" catalog="manin" columns="id"/>
     </table>
     <table name="user" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -81,6 +111,10 @@
       <column name="date_of_birth" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="gender" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
       <column name="landmark" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="pricing_ibfk_1" table="pricing" schema="" catalog="manin" columns="created_by"/>
+      <exported-key name="product_ibfk_4" table="product" schema="" catalog="manin" columns="created_by"/>
+      <exported-key name="variant_ibfk_1" table="variant" schema="" catalog="manin" columns="created_by"/>
     </table>
     <table name="variant" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -92,11 +126,19 @@
       <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="sku" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="price_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="variant_ibfk_1" columns="created_by" ref-table="user" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="variant_ibfk_2" columns="price_id" ref-table="pricing" ref-schema="" ref-catalog="manin" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="product_ibfk_5" table="product" schema="" catalog="manin" columns="variant_id"/>
+      <index name="price_idx" unique="false" columns="price_id"/>
+      <index name="user_idx" unique="false" columns="created_by"/>
     </table>
     <table name="weight" schema="" catalog="manin" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="value" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="metric_unit" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="product_ibfk_2" table="product" schema="" catalog="manin" columns="id"/>
     </table>
   </data-source>
   <data-source name="MySQL - @localhost" uuid="6715a831-6cf9-4215-81c3-4b77db8df980">

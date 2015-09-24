@@ -30,62 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PingUserResponse }
-     * 
-     */
-    public PingUserResponse createPingUserResponse() {
-        return new PingUserResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateUserDetailsResponse }
-     * 
-     */
-    public UpdateUserDetailsResponse createUpdateUserDetailsResponse() {
-        return new UpdateUserDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateVariantDetailsResponse }
-     * 
-     */
-    public UpdateVariantDetailsResponse createUpdateVariantDetailsResponse() {
-        return new UpdateVariantDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddVariantDetailsResponse }
-     * 
-     */
-    public AddVariantDetailsResponse createAddVariantDetailsResponse() {
-        return new AddVariantDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateProductDetailsResponse }
-     * 
-     */
-    public UpdateProductDetailsResponse createUpdateProductDetailsResponse() {
-        return new UpdateProductDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetUserDetailsResponse }
-     * 
-     */
-    public GetUserDetailsResponse createGetUserDetailsResponse() {
-        return new GetUserDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetAllUsersResponse }
-     * 
-     */
-    public GetAllUsersResponse createGetAllUsersResponse() {
-        return new GetAllUsersResponse();
-    }
-
-    /**
      * Create an instance of {@link GetVariantDetailsResponse }
      * 
      */
@@ -102,11 +46,51 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link AddVariantDetailsResponse }
+     * 
+     */
+    public AddVariantDetailsResponse createAddVariantDetailsResponse() {
+        return new AddVariantDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link PingProductResponse }
+     * 
+     */
+    public PingProductResponse createPingProductResponse() {
+        return new PingProductResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateVariantDetailsResponse }
+     * 
+     */
+    public UpdateVariantDetailsResponse createUpdateVariantDetailsResponse() {
+        return new UpdateVariantDetailsResponse();
+    }
+
+    /**
      * Create an instance of {@link GetProductDetailsResponse }
      * 
      */
     public GetProductDetailsResponse createGetProductDetailsResponse() {
         return new GetProductDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateProductDetailsResponse }
+     * 
+     */
+    public UpdateProductDetailsResponse createUpdateProductDetailsResponse() {
+        return new UpdateProductDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link StockResponse }
+     * 
+     */
+    public StockResponse createStockResponse() {
+        return new StockResponse();
     }
 
     /**
@@ -126,19 +110,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StockResponse }
+     * Create an instance of {@link GetAllUsersResponse }
      * 
      */
-    public StockResponse createStockResponse() {
-        return new StockResponse();
+    public GetAllUsersResponse createGetAllUsersResponse() {
+        return new GetAllUsersResponse();
     }
 
     /**
-     * Create an instance of {@link PingProductResponse }
+     * Create an instance of {@link GetUserDetailsResponse }
      * 
      */
-    public PingProductResponse createPingProductResponse() {
-        return new PingProductResponse();
+    public GetUserDetailsResponse createGetUserDetailsResponse() {
+        return new GetUserDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUserDetailsResponse }
+     * 
+     */
+    public UpdateUserDetailsResponse createUpdateUserDetailsResponse() {
+        return new UpdateUserDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link PingUserResponse }
+     * 
+     */
+    public PingUserResponse createPingUserResponse() {
+        return new PingUserResponse();
     }
 
 }

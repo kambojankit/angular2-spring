@@ -41,6 +41,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
@@ -100,12 +105,6 @@
             <version>${jodatime.version}</version>
         </dependency>
 
-        <!-- MongoDB Drivers Dependency-->
-        <!--<dependency>-->
-            <!--<groupId>org.mongodb</groupId>-->
-            <!--<artifactId>mongo-java-driver</artifactId>-->
-            <!--<version>${mongo.java.driver.version}</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -129,6 +128,60 @@
                         <configuration>
                             <outputDirectory>deployments</outputDirectory>
                             <warName>ROOT</warName>
+                        </configuration>
+                    </plugin>
+
+                    <!-- Compiles the WADL and related schema into Java classes.-->
+                    <plugin>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-wadl2java-plugin</artifactId>
+                        <version>${cxf.version}</version>
+                        <executions>
+                            <execution>
+                                <id>generate-sources</id>
+                                <phase>generate-sources</phase>
+                                <configuration>
+                                    <sourceRoot>${basedir}/src/main/java</sourceRoot>
+                                    <wadlOptions>
+                                        <wadlOption>
+                                            <wadl>
+                                                ${basedir}/src/main/resources/Wadl/manin-core.wadl
+                                            </wadl>
+                                            <packagename>com.techarha.java.manin.services</packagename>
+                                            <schemaPackagenames>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/common/CommonTypes=com.techarha.java.manin.model.common</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/User=com.techarha.java.manin.model</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/Product=com.techarha.java.manin.model</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/ProductRequest=com.techarha.java.manin.request</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryRequest=com.techarha.java.manin.request</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/ProductResponse=com.techarha.java.manin.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryResponse=com.techarha.java.manin.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserRequest=com.techarha.java.manin.request</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserResponse=com.techarha.java.manin.response</schemaPackagename>
+                                            </schemaPackagenames>
+                                        </wadlOption>
+                                    </wadlOptions>
+                                </configuration>
+                                <goals>
+                                    <goal>wadl2java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>jboss</id>
+            <build>
+                <finalName>manin</finalName>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <configuration>
+                            <warName>${artifactId}-${version}</warName>
                         </configuration>
                     </plugin>
 

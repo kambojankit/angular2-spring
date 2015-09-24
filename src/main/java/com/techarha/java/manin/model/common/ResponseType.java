@@ -42,11 +42,11 @@ import com.techarha.java.manin.response.UpdateUserDetailsResponse;
     "message"
 })
 @XmlSeeAlso({
-    AddUserResponse.class,
     UpdateUserDetailsResponse.class,
-    RemoveUserResponse.class,
+    GetUserDetailsResponse.class,
     GetAllUsersResponse.class,
-    GetUserDetailsResponse.class
+    AddUserResponse.class,
+    RemoveUserResponse.class
 })
 public class ResponseType {
 

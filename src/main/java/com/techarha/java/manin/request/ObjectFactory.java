@@ -30,59 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetUserDetailsRequest }
+     * Create an instance of {@link UpdateUserDetailsRequest }
      * 
      */
-    public GetUserDetailsRequest createGetUserDetailsRequest() {
-        return new GetUserDetailsRequest();
+    public UpdateUserDetailsRequest createUpdateUserDetailsRequest() {
+        return new UpdateUserDetailsRequest();
     }
 
     /**
-     * Create an instance of {@link AddVariantDetailsRequest }
+     * Create an instance of {@link RemoveUserRequest }
      * 
      */
-    public AddVariantDetailsRequest createAddVariantDetailsRequest() {
-        return new AddVariantDetailsRequest();
-    }
-
-    /**
-     * Create an instance of {@link UpdateVariantDetailsRequest }
-     * 
-     */
-    public UpdateVariantDetailsRequest createUpdateVariantDetailsRequest() {
-        return new UpdateVariantDetailsRequest();
-    }
-
-    /**
-     * Create an instance of {@link GetProductDetailsRequest }
-     * 
-     */
-    public GetProductDetailsRequest createGetProductDetailsRequest() {
-        return new GetProductDetailsRequest();
-    }
-
-    /**
-     * Create an instance of {@link AddToStockRequest }
-     * 
-     */
-    public AddToStockRequest createAddToStockRequest() {
-        return new AddToStockRequest();
-    }
-
-    /**
-     * Create an instance of {@link AddProductDetailsRequest }
-     * 
-     */
-    public AddProductDetailsRequest createAddProductDetailsRequest() {
-        return new AddProductDetailsRequest();
-    }
-
-    /**
-     * Create an instance of {@link RemoveFromStockRequest }
-     * 
-     */
-    public RemoveFromStockRequest createRemoveFromStockRequest() {
-        return new RemoveFromStockRequest();
+    public RemoveUserRequest createRemoveUserRequest() {
+        return new RemoveUserRequest();
     }
 
     /**
@@ -94,11 +54,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateUserDetailsRequest }
+     * Create an instance of {@link GetUserDetailsRequest }
      * 
      */
-    public UpdateUserDetailsRequest createUpdateUserDetailsRequest() {
-        return new UpdateUserDetailsRequest();
+    public GetUserDetailsRequest createGetUserDetailsRequest() {
+        return new GetUserDetailsRequest();
     }
 
     /**
@@ -110,11 +70,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RemoveUserRequest }
+     * Create an instance of {@link AddVariantDetailsRequest }
      * 
      */
-    public RemoveUserRequest createRemoveUserRequest() {
-        return new RemoveUserRequest();
+    public AddVariantDetailsRequest createAddVariantDetailsRequest() {
+        return new AddVariantDetailsRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetProductDetailsRequest }
+     * 
+     */
+    public GetProductDetailsRequest createGetProductDetailsRequest() {
+        return new GetProductDetailsRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddProductDetailsRequest }
+     * 
+     */
+    public AddProductDetailsRequest createAddProductDetailsRequest() {
+        return new AddProductDetailsRequest();
+    }
+
+    /**
+     * Create an instance of {@link UpdateVariantDetailsRequest }
+     * 
+     */
+    public UpdateVariantDetailsRequest createUpdateVariantDetailsRequest() {
+        return new UpdateVariantDetailsRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddToStockRequest }
+     * 
+     */
+    public AddToStockRequest createAddToStockRequest() {
+        return new AddToStockRequest();
+    }
+
+    /**
+     * Create an instance of {@link RemoveFromStockRequest }
+     * 
+     */
+    public RemoveFromStockRequest createRemoveFromStockRequest() {
+        return new RemoveFromStockRequest();
     }
 
 }
