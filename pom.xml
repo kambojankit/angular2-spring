@@ -19,6 +19,7 @@
         <jodatime.version>2.3</jodatime.version>
         <mongo.java.driver.version>2.11.0</mongo.java.driver.version>
         <mysql.connector>5.1.25</mysql.connector>
+
     </properties>
     <dependencies>
         <dependency>
