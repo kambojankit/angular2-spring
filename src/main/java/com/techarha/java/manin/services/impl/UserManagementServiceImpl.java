@@ -39,6 +39,8 @@ public class UserManagementServiceImpl implements UserManagementService {
 
     @Override
     public PingUserResponse pingUser() {
-        return null;
+        PingUserResponse response = new PingUserResponse();
+        response.setResult("True");
+        return response;
     }
 }
