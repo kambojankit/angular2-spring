@@ -20,7 +20,7 @@ import com.techarha.java.manin.model.UID;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element ref="{http://www.techarha.com/schema/xsd/manin/Product}UID"/>
- *         &lt;element name="quantity" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="quantityToAdd" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="userID" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -33,7 +33,7 @@ import com.techarha.java.manin.model.UID;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "uid",
-    "quantity",
+    "quantityToAdd",
     "userID"
 })
 @XmlRootElement(name = "addToStockRequest", namespace = "http://www.techarha.com/schema/xsd/manin/InventoryRequest")
@@ -42,7 +42,7 @@ public class AddToStockRequest {
     @XmlElement(name = "UID", namespace = "http://www.techarha.com/schema/xsd/manin/Product", required = true)
     protected UID uid;
     @XmlElement(namespace = "http://www.techarha.com/schema/xsd/manin/InventoryRequest")
-    protected int quantity;
+    protected int quantityToAdd;
     @XmlElement(namespace = "http://www.techarha.com/schema/xsd/manin/InventoryRequest", required = true)
     protected String userID;
 
@@ -71,19 +71,19 @@ public class AddToStockRequest {
     }
 
     /**
-     * Gets the value of the quantity property.
+     * Gets the value of the quantityToAdd property.
      * 
      */
-    public int getQuantity() {
-        return quantity;
+    public int getQuantityToAdd() {
+        return quantityToAdd;
     }
 
     /**
-     * Sets the value of the quantity property.
+     * Sets the value of the quantityToAdd property.
      * 
      */
-    public void setQuantity(int value) {
-        this.quantity = value;
+    public void setQuantityToAdd(int value) {
+        this.quantityToAdd = value;
     }
 
     /**

@@ -30,38 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateUserDetailsRequest }
-     * 
-     */
-    public UpdateUserDetailsRequest createUpdateUserDetailsRequest() {
-        return new UpdateUserDetailsRequest();
-    }
-
-    /**
-     * Create an instance of {@link RemoveUserRequest }
-     * 
-     */
-    public RemoveUserRequest createRemoveUserRequest() {
-        return new RemoveUserRequest();
-    }
-
-    /**
-     * Create an instance of {@link AddUserRequest }
-     * 
-     */
-    public AddUserRequest createAddUserRequest() {
-        return new AddUserRequest();
-    }
-
-    /**
-     * Create an instance of {@link GetUserDetailsRequest }
-     * 
-     */
-    public GetUserDetailsRequest createGetUserDetailsRequest() {
-        return new GetUserDetailsRequest();
-    }
-
-    /**
      * Create an instance of {@link UpdateProductDetailsRequest }
      * 
      */
@@ -115,6 +83,38 @@ public class ObjectFactory {
      */
     public RemoveFromStockRequest createRemoveFromStockRequest() {
         return new RemoveFromStockRequest();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUserDetailsRequest }
+     * 
+     */
+    public UpdateUserDetailsRequest createUpdateUserDetailsRequest() {
+        return new UpdateUserDetailsRequest();
+    }
+
+    /**
+     * Create an instance of {@link RemoveUserRequest }
+     * 
+     */
+    public RemoveUserRequest createRemoveUserRequest() {
+        return new RemoveUserRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddUserRequest }
+     * 
+     */
+    public AddUserRequest createAddUserRequest() {
+        return new AddUserRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetUserDetailsRequest }
+     * 
+     */
+    public GetUserDetailsRequest createGetUserDetailsRequest() {
+        return new GetUserDetailsRequest();
     }
 
 }

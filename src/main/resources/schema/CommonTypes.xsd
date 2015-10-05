@@ -12,7 +12,7 @@
             <xs:element name="name" minOccurs="1" maxOccurs="1" type="NameType"/>
             <xs:element name="mobile" minOccurs="1" maxOccurs="1" type="xs:int"/>
             <xs:element name="email" minOccurs="1" maxOccurs="1" type="EmailType"/>
-            <xs:element name="address" minOccurs="1" maxOccurs="1" type="AddressType"/>
+            <xs:element name="address" minOccurs="0" maxOccurs="1" type="AddressType"/>
             <xs:element name="birthDate" minOccurs="0" maxOccurs="1" type="xs:date"/>
             <xs:element name="gender" minOccurs="0" maxOccurs="1" type="xs:string"/>
         </xs:sequence>

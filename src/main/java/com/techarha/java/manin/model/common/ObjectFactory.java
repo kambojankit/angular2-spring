@@ -62,6 +62,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PingResponse }
+     * 
+     */
+    public PingResponse createPingResponse() {
+        return new PingResponse();
+    }
+
+    /**
      * Create an instance of {@link PriceType.Price }
      * 
      */
@@ -99,14 +107,6 @@ public class ObjectFactory {
      */
     public AddressType createAddressType() {
         return new AddressType();
-    }
-
-    /**
-     * Create an instance of {@link PingResponse }
-     * 
-     */
-    public PingResponse createPingResponse() {
-        return new PingResponse();
     }
 
 }

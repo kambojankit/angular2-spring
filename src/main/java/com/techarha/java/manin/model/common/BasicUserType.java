@@ -24,7 +24,7 @@ import com.techarha.java.manin.model.User;
  *         &lt;element name="name" type="{http://www.techarha.com/schema/xsd/common/CommonTypes}NameType"/>
  *         &lt;element name="mobile" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="email" type="{http://www.techarha.com/schema/xsd/common/CommonTypes}EmailType"/>
- *         &lt;element name="address" type="{http://www.techarha.com/schema/xsd/common/CommonTypes}AddressType"/>
+ *         &lt;element name="address" type="{http://www.techarha.com/schema/xsd/common/CommonTypes}AddressType" minOccurs="0"/>
  *         &lt;element name="birthDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="gender" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
@@ -54,7 +54,6 @@ public class BasicUserType {
     protected int mobile;
     @XmlElement(required = true)
     protected String email;
-    @XmlElement(required = true)
     protected AddressType address;
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar birthDate;

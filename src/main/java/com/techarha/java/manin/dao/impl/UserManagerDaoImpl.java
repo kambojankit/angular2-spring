@@ -1,49 +1,42 @@
 package com.techarha.java.manin.dao.impl;
 
+
 import com.techarha.java.manin.dao.UserManagerDao;
-import com.techarha.java.manin.domain.User;
+import com.techarha.java.manin.domain.UserEntity;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.joda.time.DateTime;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.sql.Timestamp;
 
 /**
  * Created by ankit on 28/03/15.
  */
 @Component("userManagerDao")
-public class UserManagerDaoImpl implements UserManagerDao{
+public class UserManagerDaoImpl implements UserManagerDao {
+
+    @Autowired
+    SessionFactory sessionFactory;
 
     @Override
-    public User fetchUserById(Integer id) {
-        User user = new User();
+    public boolean createUser() {
+        Session session = sessionFactory.openSession();
 
-        user.setId(124);
-        user.setName("Demo User");
-        user.setBirthDate(new DateTime());
-        user.setCity("Demo city");
-        user.setEmail("demouser@demoemail.com");
-        user.setState("DemoState");
 
-        return user;
-    }
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName("Ank");
+        userEntity.setCity("chd");
+        userEntity.setDateOfBirth(new Timestamp(new DateTime().getMillis()));
+        userEntity.setEmail("ank@gmail.com");
+        userEntity.setGender("male");
+        userEntity.setHome("123");
+        userEntity.setId(1);
+        userEntity.setPhone("1231231231");
 
-    @Override
-    public List fetchAllUsers() {
-        return null;
-    }
-
-    @Override
-    public void insertUser(User user) {
-
-    }
-
-    @Override
-    public void updateUser(User user) {
-
-    }
-
-    @Override
-    public void deleteUser(User user) {
-
+        session.saveOrUpdate(userEntity);
+        session.close();
+        return true;
     }
 }
