@@ -13,7 +13,7 @@ public class DepartmentEntity {
     private String code;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class DepartmentEntity {
     }
 
     @Basic
-    @Column(name = "name")
+    @Column(name = "name", nullable = true, insertable = true, updatable = true, length = 45)
     public String getName() {
         return name;
     }
@@ -33,7 +33,7 @@ public class DepartmentEntity {
     }
 
     @Basic
-    @Column(name = "code")
+    @Column(name = "code", nullable = true, insertable = true, updatable = true, length = 4)
     public String getCode() {
         return code;
     }

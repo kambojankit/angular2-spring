@@ -15,7 +15,7 @@ public class RatingsEntity {
     private String userEmail;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -25,7 +25,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "score")
+    @Column(name = "score", nullable = true, insertable = true, updatable = true, length = 45)
     public String getScore() {
         return score;
     }
@@ -35,7 +35,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "comment")
+    @Column(name = "comment", nullable = true, insertable = true, updatable = true, length = 45)
     public String getComment() {
         return comment;
     }
@@ -45,7 +45,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "user_name")
+    @Column(name = "user_name", nullable = true, insertable = true, updatable = true, length = 45)
     public String getUserName() {
         return userName;
     }
@@ -55,7 +55,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "user_email")
+    @Column(name = "user_email", nullable = true, insertable = true, updatable = true, length = 45)
     public String getUserEmail() {
         return userEmail;
     }

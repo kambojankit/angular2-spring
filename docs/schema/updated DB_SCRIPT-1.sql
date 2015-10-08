@@ -5,11 +5,10 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema sakila
 -- -----------------------------------------------------
-
-DROP SCHEMA manin;
 -- -----------------------------------------------------
 -- Schema manin
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `manin` ;
 CREATE SCHEMA IF NOT EXISTS `manin` DEFAULT CHARACTER SET utf8 ;
 USE `manin` ;
 
@@ -19,12 +18,12 @@ USE `manin` ;
 DROP TABLE IF EXISTS `manin`.`department` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`department` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   `code` VARCHAR(4) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -33,18 +32,18 @@ CREATE TABLE IF NOT EXISTS `manin`.`department` (
 DROP TABLE IF EXISTS `manin`.`category` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`category` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `dept_id` INT(11) NULL DEFAULT NULL,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   `code` VARCHAR(4) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `category_dept_key`
-  FOREIGN KEY (`dept_id`)
-  REFERENCES `manin`.`department` (`id`)
+    FOREIGN KEY (`dept_id`)
+    REFERENCES `manin`.`department` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 CREATE INDEX `department_idx` ON `manin`.`category` (`dept_id` ASC);
 
@@ -55,7 +54,7 @@ CREATE INDEX `department_idx` ON `manin`.`category` (`dept_id` ASC);
 DROP TABLE IF EXISTS `manin`.`user` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`user` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   `phone` VARCHAR(45) NULL DEFAULT NULL,
   `email` VARCHAR(45) NULL DEFAULT NULL,
@@ -68,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `manin`.`user` (
   `gender` VARCHAR(1) NULL DEFAULT NULL,
   `landmark` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -78,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `manin`.`user` (
 DROP TABLE IF EXISTS `manin`.`pricing` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`pricing` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `currency` VARCHAR(45) NULL DEFAULT NULL,
   `cost_price` DECIMAL(10,2) NULL DEFAULT NULL,
   `procurement_price` DECIMAL(10,2) NULL DEFAULT NULL,
@@ -91,12 +90,12 @@ CREATE TABLE IF NOT EXISTS `manin`.`pricing` (
   `created_at` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `pricing_ibfk_1`
-  FOREIGN KEY (`created_by`)
-  REFERENCES `manin`.`user` (`id`)
+    FOREIGN KEY (`created_by`)
+    REFERENCES `manin`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 CREATE INDEX `user_idx` ON `manin`.`pricing` (`created_by` ASC);
 
@@ -107,7 +106,7 @@ CREATE INDEX `user_idx` ON `manin`.`pricing` (`created_by` ASC);
 DROP TABLE IF EXISTS `manin`.`product` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`product` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `department` INT(11) NULL DEFAULT NULL,
   `category` INT(11) NULL DEFAULT NULL,
   `brand` VARCHAR(45) NULL DEFAULT NULL,
@@ -123,17 +122,17 @@ CREATE TABLE IF NOT EXISTS `manin`.`product` (
   `created_by` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `product_user_key`
-  FOREIGN KEY (`created_by`)
-  REFERENCES `manin`.`user` (`id`)
+    FOREIGN KEY (`created_by`)
+    REFERENCES `manin`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `product_cat_key`
-  FOREIGN KEY (`category`)
-  REFERENCES `manin`.`category` (`id`)
+    FOREIGN KEY (`category`)
+    REFERENCES `manin`.`category` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 CREATE INDEX `user_idx` ON `manin`.`product` (`created_by` ASC);
 
@@ -146,13 +145,13 @@ CREATE INDEX `category_idx` ON `manin`.`product` (`category` ASC);
 DROP TABLE IF EXISTS `manin`.`ratings` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`ratings` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `score` VARCHAR(45) NULL,
   `comment` VARCHAR(45) NULL,
   `user_name` VARCHAR(45) NULL,
   `user_email` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
-  ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -161,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `manin`.`ratings` (
 DROP TABLE IF EXISTS `manin`.`variant` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`variant` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `product_id` INT(11) NOT NULL,
   `thumbnail_uri` VARCHAR(45) NULL DEFAULT NULL,
   `image_uri` VARCHAR(45) NULL DEFAULT NULL,
@@ -176,27 +175,27 @@ CREATE TABLE IF NOT EXISTS `manin`.`variant` (
   `ratings` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `variant_usr_key`
-  FOREIGN KEY (`created_by`)
-  REFERENCES `manin`.`user` (`id`)
+    FOREIGN KEY (`created_by`)
+    REFERENCES `manin`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `variant_prc_key`
-  FOREIGN KEY (`price_id`)
-  REFERENCES `manin`.`pricing` (`id`)
+    FOREIGN KEY (`price_id`)
+    REFERENCES `manin`.`pricing` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `variant_pr_key`
-  FOREIGN KEY (`product_id`)
-  REFERENCES `manin`.`product` (`id`)
+    FOREIGN KEY (`product_id`)
+    REFERENCES `manin`.`product` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `variant_rating_key`
-  FOREIGN KEY (`ratings`)
-  REFERENCES `manin`.`ratings` (`id`)
+    FOREIGN KEY (`ratings`)
+    REFERENCES `manin`.`ratings` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 CREATE INDEX `user_idx` ON `manin`.`variant` (`created_by` ASC);
 
@@ -213,16 +212,16 @@ CREATE INDEX `variant_rating_key_idx` ON `manin`.`variant` (`ratings` ASC);
 DROP TABLE IF EXISTS `manin`.`Inventory` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`Inventory` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `variant_id` INT(11) NOT NULL COMMENT '	',
   `quantity` INT NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `variant_quant_key`
-  FOREIGN KEY (`variant_id`)
-  REFERENCES `manin`.`variant` (`id`)
+    FOREIGN KEY (`variant_id`)
+    REFERENCES `manin`.`variant` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 CREATE INDEX `variant_quant_key_idx` ON `manin`.`Inventory` (`variant_id` ASC);
 
@@ -233,7 +232,7 @@ CREATE INDEX `variant_quant_key_idx` ON `manin`.`Inventory` (`variant_id` ASC);
 DROP TABLE IF EXISTS `manin`.`shipments` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`shipments` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `tracking_number` VARCHAR(45) NULL,
   `shipment_vendor` VARCHAR(45) NULL,
   `shipment_date` VARCHAR(45) NULL,
@@ -241,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `manin`.`shipments` (
   `shipment_type` VARCHAR(45) NULL,
   `ship_to_user_id` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
-  ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -250,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `manin`.`shipments` (
 DROP TABLE IF EXISTS `manin`.`order_process` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`order_process` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `receive_date` VARCHAR(45) NULL,
   `pack_date` VARCHAR(45) NULL,
   `dispatch_date` VARCHAR(45) NULL,
@@ -258,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `manin`.`order_process` (
   `packaging_material` VARCHAR(45) NULL,
   `manifest_date` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
-  ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -267,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `manin`.`order_process` (
 DROP TABLE IF EXISTS `manin`.`Orders` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`Orders` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `marketplace` VARCHAR(45) NULL,
   `marketplace_order_id` VARCHAR(45) NULL,
   `invoice_number` VARCHAR(45) NULL,
@@ -277,21 +276,21 @@ CREATE TABLE IF NOT EXISTS `manin`.`Orders` (
   `order_process_id` INT(11) NOT NULL COMMENT 'The representation of order processing dates and time',
   PRIMARY KEY (`id`),
   CONSTRAINT `order_variant_key`
-  FOREIGN KEY (`variant_id`)
-  REFERENCES `manin`.`variant` (`id`)
+    FOREIGN KEY (`variant_id`)
+    REFERENCES `manin`.`variant` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `order_shipment_key`
-  FOREIGN KEY (`shipment_id`)
-  REFERENCES `manin`.`shipments` (`id`)
+    FOREIGN KEY (`shipment_id`)
+    REFERENCES `manin`.`shipments` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `order_process_id`
-  FOREIGN KEY (`order_process_id`)
-  REFERENCES `manin`.`order_process` (`id`)
+    FOREIGN KEY (`order_process_id`)
+    REFERENCES `manin`.`order_process` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 CREATE INDEX `order_variant_key_idx` ON `manin`.`Orders` (`variant_id` ASC);
 
@@ -306,14 +305,14 @@ CREATE INDEX `order_process_id_idx` ON `manin`.`Orders` (`order_process_id` ASC)
 DROP TABLE IF EXISTS `manin`.`Procurement` ;
 
 CREATE TABLE IF NOT EXISTS `manin`.`Procurement` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `bill_number` VARCHAR(45) NULL,
   `bill_date` VARCHAR(45) NULL,
   `bill_image_album_uri` VARCHAR(45) NULL,
   `bill_amount` VARCHAR(45) NULL,
   `ship_charges` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
-  ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

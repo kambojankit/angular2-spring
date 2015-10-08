@@ -23,7 +23,7 @@ public class PricingEntity {
     private Timestamp createdAt;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -33,7 +33,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "currency")
+    @Column(name = "currency", nullable = true, insertable = true, updatable = true, length = 45)
     public String getCurrency() {
         return currency;
     }
@@ -43,7 +43,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "cost_price")
+    @Column(name = "cost_price", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getCostPrice() {
         return costPrice;
     }
@@ -53,7 +53,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "procurement_price")
+    @Column(name = "procurement_price", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getProcurementPrice() {
         return procurementPrice;
     }
@@ -63,7 +63,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "maintainence_price")
+    @Column(name = "maintainence_price", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getMaintainencePrice() {
         return maintainencePrice;
     }
@@ -73,7 +73,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "selling_price")
+    @Column(name = "selling_price", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getSellingPrice() {
         return sellingPrice;
     }
@@ -83,7 +83,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "discount")
+    @Column(name = "discount", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getDiscount() {
         return discount;
     }
@@ -93,7 +93,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "max_discount")
+    @Column(name = "max_discount", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getMaxDiscount() {
         return maxDiscount;
     }
@@ -103,7 +103,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "marked_price")
+    @Column(name = "marked_price", nullable = true, insertable = true, updatable = true, precision = 2)
     public BigDecimal getMarkedPrice() {
         return markedPrice;
     }
@@ -113,7 +113,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "created_by")
+    @Column(name = "created_by", nullable = true, insertable = true, updatable = true)
     public Integer getCreatedBy() {
         return createdBy;
     }
@@ -123,7 +123,7 @@ public class PricingEntity {
     }
 
     @Basic
-    @Column(name = "created_at")
+    @Column(name = "created_at", nullable = true, insertable = true, updatable = true)
     public Timestamp getCreatedAt() {
         return createdAt;
     }

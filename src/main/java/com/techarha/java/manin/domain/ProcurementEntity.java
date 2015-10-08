@@ -16,7 +16,7 @@ public class ProcurementEntity {
     private String shipCharges;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -26,7 +26,7 @@ public class ProcurementEntity {
     }
 
     @Basic
-    @Column(name = "bill_number")
+    @Column(name = "bill_number", nullable = true, insertable = true, updatable = true, length = 45)
     public String getBillNumber() {
         return billNumber;
     }
@@ -36,7 +36,7 @@ public class ProcurementEntity {
     }
 
     @Basic
-    @Column(name = "bill_date")
+    @Column(name = "bill_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getBillDate() {
         return billDate;
     }
@@ -46,7 +46,7 @@ public class ProcurementEntity {
     }
 
     @Basic
-    @Column(name = "bill_image_album_uri")
+    @Column(name = "bill_image_album_uri", nullable = true, insertable = true, updatable = true, length = 45)
     public String getBillImageAlbumUri() {
         return billImageAlbumUri;
     }
@@ -56,7 +56,7 @@ public class ProcurementEntity {
     }
 
     @Basic
-    @Column(name = "bill_amount")
+    @Column(name = "bill_amount", nullable = true, insertable = true, updatable = true, length = 45)
     public String getBillAmount() {
         return billAmount;
     }
@@ -66,7 +66,7 @@ public class ProcurementEntity {
     }
 
     @Basic
-    @Column(name = "ship_charges")
+    @Column(name = "ship_charges", nullable = true, insertable = true, updatable = true, length = 45)
     public String getShipCharges() {
         return shipCharges;
     }

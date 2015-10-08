@@ -23,7 +23,7 @@ public class UserEntity {
     private String landmark;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -33,7 +33,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "name")
+    @Column(name = "name", nullable = true, insertable = true, updatable = true, length = 45)
     public String getName() {
         return name;
     }
@@ -43,7 +43,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "phone")
+    @Column(name = "phone", nullable = true, insertable = true, updatable = true, length = 45)
     public String getPhone() {
         return phone;
     }
@@ -53,7 +53,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "email")
+    @Column(name = "email", nullable = true, insertable = true, updatable = true, length = 45)
     public String getEmail() {
         return email;
     }
@@ -63,7 +63,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "home")
+    @Column(name = "home", nullable = true, insertable = true, updatable = true, length = 45)
     public String getHome() {
         return home;
     }
@@ -73,7 +73,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "street")
+    @Column(name = "street", nullable = true, insertable = true, updatable = true, length = 45)
     public String getStreet() {
         return street;
     }
@@ -83,7 +83,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "city")
+    @Column(name = "city", nullable = true, insertable = true, updatable = true, length = 45)
     public String getCity() {
         return city;
     }
@@ -93,7 +93,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "state")
+    @Column(name = "state", nullable = true, insertable = true, updatable = true, length = 45)
     public String getState() {
         return state;
     }
@@ -103,7 +103,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "pincode")
+    @Column(name = "pincode", nullable = true, insertable = true, updatable = true)
     public Integer getPincode() {
         return pincode;
     }
@@ -113,7 +113,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "date_of_birth")
+    @Column(name = "date_of_birth", nullable = true, insertable = true, updatable = true)
     public Timestamp getDateOfBirth() {
         return dateOfBirth;
     }
@@ -123,7 +123,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "gender")
+    @Column(name = "gender", nullable = true, insertable = true, updatable = true, length = 1)
     public String getGender() {
         return gender;
     }
@@ -133,7 +133,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "landmark")
+    @Column(name = "landmark", nullable = true, insertable = true, updatable = true, length = 45)
     public String getLandmark() {
         return landmark;
     }

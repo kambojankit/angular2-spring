@@ -17,7 +17,7 @@ public class ShipmentsEntity {
     private String shipToUserId;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "tracking_number")
+    @Column(name = "tracking_number", nullable = true, insertable = true, updatable = true, length = 45)
     public String getTrackingNumber() {
         return trackingNumber;
     }
@@ -37,7 +37,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "shipment_vendor")
+    @Column(name = "shipment_vendor", nullable = true, insertable = true, updatable = true, length = 45)
     public String getShipmentVendor() {
         return shipmentVendor;
     }
@@ -47,7 +47,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "shipment_date")
+    @Column(name = "shipment_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getShipmentDate() {
         return shipmentDate;
     }
@@ -57,7 +57,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "delivery_date")
+    @Column(name = "delivery_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getDeliveryDate() {
         return deliveryDate;
     }
@@ -67,7 +67,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "shipment_type")
+    @Column(name = "shipment_type", nullable = true, insertable = true, updatable = true, length = 45)
     public String getShipmentType() {
         return shipmentType;
     }
@@ -77,7 +77,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "ship_to_user_id")
+    @Column(name = "ship_to_user_id", nullable = true, insertable = true, updatable = true, length = 45)
     public String getShipToUserId() {
         return shipToUserId;
     }

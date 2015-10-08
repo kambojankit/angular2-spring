@@ -17,7 +17,7 @@ public class OrderProcessEntity {
     private String manifestDate;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "receive_date")
+    @Column(name = "receive_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getReceiveDate() {
         return receiveDate;
     }
@@ -37,7 +37,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "pack_date")
+    @Column(name = "pack_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getPackDate() {
         return packDate;
     }
@@ -47,7 +47,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "dispatch_date")
+    @Column(name = "dispatch_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getDispatchDate() {
         return dispatchDate;
     }
@@ -57,7 +57,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "delivery_date")
+    @Column(name = "delivery_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getDeliveryDate() {
         return deliveryDate;
     }
@@ -67,7 +67,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "packaging_material")
+    @Column(name = "packaging_material", nullable = true, insertable = true, updatable = true, length = 45)
     public String getPackagingMaterial() {
         return packagingMaterial;
     }
@@ -77,7 +77,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "manifest_date")
+    @Column(name = "manifest_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getManifestDate() {
         return manifestDate;
     }

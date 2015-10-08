@@ -13,7 +13,7 @@ public class InventoryEntity {
     private int quantity;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class InventoryEntity {
     }
 
     @Basic
-    @Column(name = "variant_id")
+    @Column(name = "variant_id", nullable = false, insertable = true, updatable = true)
     public int getVariantId() {
         return variantId;
     }
@@ -33,7 +33,7 @@ public class InventoryEntity {
     }
 
     @Basic
-    @Column(name = "quantity")
+    @Column(name = "quantity", nullable = false, insertable = true, updatable = true)
     public int getQuantity() {
         return quantity;
     }

@@ -27,7 +27,6 @@ public class UserControllerImpl implements UserController {
     private UserValidator userValidator;
 
 
-
     @Override
     public AddUserResponse addUser(AddUserRequest adduserrequest) {
         logger.info("Initiating Process To add user to the system.");

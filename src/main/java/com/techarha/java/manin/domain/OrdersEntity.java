@@ -18,7 +18,7 @@ public class OrdersEntity {
     private int orderProcessId;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -28,7 +28,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "marketplace")
+    @Column(name = "marketplace", nullable = true, insertable = true, updatable = true, length = 45)
     public String getMarketplace() {
         return marketplace;
     }
@@ -38,7 +38,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "marketplace_order_id")
+    @Column(name = "marketplace_order_id", nullable = true, insertable = true, updatable = true, length = 45)
     public String getMarketplaceOrderId() {
         return marketplaceOrderId;
     }
@@ -48,7 +48,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "invoice_number")
+    @Column(name = "invoice_number", nullable = true, insertable = true, updatable = true, length = 45)
     public String getInvoiceNumber() {
         return invoiceNumber;
     }
@@ -58,7 +58,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "variant_id")
+    @Column(name = "variant_id", nullable = false, insertable = true, updatable = true)
     public int getVariantId() {
         return variantId;
     }
@@ -68,7 +68,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "shipment_id")
+    @Column(name = "shipment_id", nullable = false, insertable = true, updatable = true)
     public int getShipmentId() {
         return shipmentId;
     }
@@ -78,7 +78,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "order_date")
+    @Column(name = "order_date", nullable = true, insertable = true, updatable = true, length = 45)
     public String getOrderDate() {
         return orderDate;
     }
@@ -88,7 +88,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "order_process_id")
+    @Column(name = "order_process_id", nullable = false, insertable = true, updatable = true)
     public int getOrderProcessId() {
         return orderProcessId;
     }

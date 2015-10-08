@@ -8,7 +8,7 @@
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="manin"/>
     <table name="Inventory" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="variant_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="CQ=="/>
       <column name="quantity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
@@ -16,7 +16,7 @@
       <index name="variant_quant_key_idx" unique="false" columns="variant_id"/>
     </table>
     <table name="Orders" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="marketplace" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="marketplace_order_id" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="invoice_number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -33,7 +33,7 @@
       <index name="order_variant_key_idx" unique="false" columns="variant_id"/>
     </table>
     <table name="Procurement" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="bill_number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="bill_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="bill_image_album_uri" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -42,7 +42,7 @@
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="category" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="dept_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
@@ -52,14 +52,14 @@
       <index name="department_idx" unique="false" columns="dept_id"/>
     </table>
     <table name="department" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="category_dept_key" table="category" schema="" catalog="manin" columns="dept_id"/>
     </table>
     <table name="order_process" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="receive_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="pack_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="dispatch_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -70,7 +70,7 @@
       <exported-key name="order_process_id" table="Orders" schema="" catalog="manin" columns="order_process_id"/>
     </table>
     <table name="pricing" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="currency" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="cost_price" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
       <column name="procurement_price" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
@@ -87,7 +87,7 @@
       <index name="user_idx" unique="false" columns="created_by"/>
     </table>
     <table name="product" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="department" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="category" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="brand" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -109,7 +109,7 @@
       <index name="user_idx" unique="false" columns="created_by"/>
     </table>
     <table name="ratings" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="score" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="comment" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="user_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -118,7 +118,7 @@
       <exported-key name="variant_rating_key" table="variant" schema="" catalog="manin" columns="ratings"/>
     </table>
     <table name="shipments" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="tracking_number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="shipment_vendor" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="shipment_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -129,7 +129,7 @@
       <exported-key name="order_shipment_key" table="Orders" schema="" catalog="manin" columns="shipment_id"/>
     </table>
     <table name="user" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -147,7 +147,7 @@
       <exported-key name="variant_usr_key" table="variant" schema="" catalog="manin" columns="created_by"/>
     </table>
     <table name="variant" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="thumbnail_uri" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="image_uri" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -181,7 +181,7 @@
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
     <schema name="" catalog="manin"/>
     <table name="Inventory" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="variant_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="CQ=="/>
       <column name="quantity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
@@ -189,7 +189,7 @@
       <index name="variant_quant_key_idx" unique="false" columns="variant_id"/>
     </table>
     <table name="Orders" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="marketplace" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="marketplace_order_id" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="invoice_number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -206,7 +206,7 @@
       <index name="order_variant_key_idx" unique="false" columns="variant_id"/>
     </table>
     <table name="Procurement" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="bill_number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="bill_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="bill_image_album_uri" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -215,7 +215,7 @@
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="category" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="dept_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
@@ -225,14 +225,14 @@
       <index name="department_idx" unique="false" columns="dept_id"/>
     </table>
     <table name="department" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="category_dept_key" table="category" schema="" catalog="manin" columns="dept_id"/>
     </table>
     <table name="order_process" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="receive_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="pack_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="dispatch_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -243,7 +243,7 @@
       <exported-key name="order_process_id" table="Orders" schema="" catalog="manin" columns="order_process_id"/>
     </table>
     <table name="pricing" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="currency" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="cost_price" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
       <column name="procurement_price" sqlType="DECIMAL" precision="10" scale="2" nullable="true" jdbcType="3"/>
@@ -260,7 +260,7 @@
       <index name="user_idx" unique="false" columns="created_by"/>
     </table>
     <table name="product" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="department" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="category" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="brand" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -282,7 +282,7 @@
       <index name="user_idx" unique="false" columns="created_by"/>
     </table>
     <table name="ratings" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="score" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="comment" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="user_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -291,7 +291,7 @@
       <exported-key name="variant_rating_key" table="variant" schema="" catalog="manin" columns="ratings"/>
     </table>
     <table name="shipments" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="tracking_number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="shipment_vendor" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="shipment_date" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -302,7 +302,7 @@
       <exported-key name="order_shipment_key" table="Orders" schema="" catalog="manin" columns="shipment_id"/>
     </table>
     <table name="user" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
@@ -320,7 +320,7 @@
       <exported-key name="variant_usr_key" table="variant" schema="" catalog="manin" columns="created_by"/>
     </table>
     <table name="variant" schema="" catalog="manin" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="thumbnail_uri" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="image_uri" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>

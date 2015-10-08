@@ -23,7 +23,7 @@ public class VariantEntity {
     private int ratings;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -33,7 +33,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "product_id")
+    @Column(name = "product_id", nullable = false, insertable = true, updatable = true)
     public int getProductId() {
         return productId;
     }
@@ -43,7 +43,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "thumbnail_uri")
+    @Column(name = "thumbnail_uri", nullable = true, insertable = true, updatable = true, length = 45)
     public String getThumbnailUri() {
         return thumbnailUri;
     }
@@ -53,7 +53,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "image_uri")
+    @Column(name = "image_uri", nullable = true, insertable = true, updatable = true, length = 45)
     public String getImageUri() {
         return imageUri;
     }
@@ -63,7 +63,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "color")
+    @Column(name = "color", nullable = true, insertable = true, updatable = true, length = 45)
     public String getColor() {
         return color;
     }
@@ -73,7 +73,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "created_at")
+    @Column(name = "created_at", nullable = true, insertable = true, updatable = true, length = 45)
     public String getCreatedAt() {
         return createdAt;
     }
@@ -83,7 +83,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "created_by")
+    @Column(name = "created_by", nullable = false, insertable = true, updatable = true)
     public int getCreatedBy() {
         return createdBy;
     }
@@ -93,7 +93,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "sku")
+    @Column(name = "sku", nullable = false, insertable = true, updatable = true, length = 45)
     public String getSku() {
         return sku;
     }
@@ -103,7 +103,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "price_id")
+    @Column(name = "price_id", nullable = false, insertable = true, updatable = true)
     public int getPriceId() {
         return priceId;
     }
@@ -113,7 +113,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "size")
+    @Column(name = "size", nullable = false, insertable = true, updatable = true)
     public int getSize() {
         return size;
     }
@@ -123,7 +123,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "weight")
+    @Column(name = "weight", nullable = false, insertable = true, updatable = true)
     public int getWeight() {
         return weight;
     }
@@ -133,7 +133,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "capacity")
+    @Column(name = "capacity", nullable = false, insertable = true, updatable = true)
     public int getCapacity() {
         return capacity;
     }
@@ -143,7 +143,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "ratings")
+    @Column(name = "ratings", nullable = false, insertable = true, updatable = true)
     public int getRatings() {
         return ratings;
     }
