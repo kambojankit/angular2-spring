@@ -86,6 +86,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link StockResponse }
+     * 
+     */
+    public StockResponse createStockResponse() {
+        return new StockResponse();
+    }
+
+    /**
      * Create an instance of {@link RemoveUserResponse }
      * 
      */
@@ -131,14 +139,6 @@ public class ObjectFactory {
      */
     public PingUserResponse createPingUserResponse() {
         return new PingUserResponse();
-    }
-
-    /**
-     * Create an instance of {@link StockResponse }
-     * 
-     */
-    public StockResponse createStockResponse() {
-        return new StockResponse();
     }
 
 }

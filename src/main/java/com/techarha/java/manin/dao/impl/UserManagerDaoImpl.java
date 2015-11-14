@@ -16,12 +16,19 @@ import java.sql.Timestamp;
  * Created by ankit on 28/03/15.
  */
 @Component("userManagerDao")
-public class UserManagerDaoImpl implements UserManagerDao {
+public class UserManagerDaoImpl extends GenericDaoHibernateImpl<UserEntity, Integer> implements UserManagerDao {
 
     @Autowired
     SessionFactory sessionFactory;
 
-    @Override
+//    public UserManagerDaoImpl(Class type) {
+//        super(type);
+//    }
+
+    public UserManagerDaoImpl(){
+        super(UserEntity.class);
+    }
+
     public boolean createUser() {
         Session session = sessionFactory.openSession();
         Transaction tx=session.beginTransaction();
@@ -36,7 +43,7 @@ public class UserManagerDaoImpl implements UserManagerDao {
 //        userEntity.setId(1);
         userEntity.setPhone("1231231231");
 
-        session.saveOrUpdate(userEntity);
+        session.save(userEntity);
         tx.commit();
         session.close();
         return true;

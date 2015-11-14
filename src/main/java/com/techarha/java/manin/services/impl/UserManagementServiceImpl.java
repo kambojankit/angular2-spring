@@ -56,7 +56,7 @@ public class UserManagementServiceImpl implements UserManagementService {
     @Override
     public PingUserResponse pingUser() {
         PingUserResponse response = new PingUserResponse();
-        response.setResult(""+ userManagerDao.createUser());
+        response.setResult(""+ userController.addUser(null));
         return response;
     }
 }

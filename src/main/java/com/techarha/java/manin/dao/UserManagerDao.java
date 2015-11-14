@@ -7,8 +7,5 @@ import java.util.List;
 /**
  * Created by ankit on 28/03/15.
  */
-public interface UserManagerDao {
-
-
-    boolean createUser();
+public interface UserManagerDao extends GenericDao<UserEntity, Integer> {
 }

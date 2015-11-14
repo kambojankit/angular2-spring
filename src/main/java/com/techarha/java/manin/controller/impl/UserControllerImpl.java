@@ -1,5 +1,6 @@
 package com.techarha.java.manin.controller.impl;
 
+import com.techarha.java.manin.business.UserManager;
 import com.techarha.java.manin.controller.UserController;
 import com.techarha.java.manin.exceptions.UserValidationException;
 import com.techarha.java.manin.request.AddUserRequest;
@@ -26,6 +27,10 @@ public class UserControllerImpl implements UserController {
     @Qualifier("userValidator")
     private UserValidator userValidator;
 
+    @Autowired
+    @Qualifier("userManager")
+    private UserManager userManager;
+
 
     @Override
     public AddUserResponse addUser(AddUserRequest adduserrequest) {
@@ -38,7 +43,7 @@ public class UserControllerImpl implements UserController {
 
             //transfer data to controller layer for applying required controller logic, which will then add the data to DB
             if(isValid){
-
+                userManager.addUser(adduserrequest);
             }
             //
 
