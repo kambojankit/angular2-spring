@@ -3,7 +3,7 @@ package com.techarha.java.manin.domain;
 import javax.persistence.*;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "variant", schema = "", catalog = "manin")
@@ -20,10 +20,9 @@ public class VariantEntity {
     private int size;
     private int weight;
     private int capacity;
-    private int ratings;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -33,7 +32,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "product_id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "product_id")
     public int getProductId() {
         return productId;
     }
@@ -43,7 +42,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "thumbnail_uri", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "thumbnail_uri")
     public String getThumbnailUri() {
         return thumbnailUri;
     }
@@ -53,7 +52,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "image_uri", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "image_uri")
     public String getImageUri() {
         return imageUri;
     }
@@ -63,7 +62,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "color", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "color")
     public String getColor() {
         return color;
     }
@@ -73,7 +72,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "created_at", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "created_at")
     public String getCreatedAt() {
         return createdAt;
     }
@@ -83,7 +82,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "created_by", nullable = false, insertable = true, updatable = true)
+    @Column(name = "created_by")
     public int getCreatedBy() {
         return createdBy;
     }
@@ -93,7 +92,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "sku", nullable = false, insertable = true, updatable = true, length = 45)
+    @Column(name = "sku")
     public String getSku() {
         return sku;
     }
@@ -103,7 +102,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "price_id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "price_id")
     public int getPriceId() {
         return priceId;
     }
@@ -113,7 +112,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "size", nullable = false, insertable = true, updatable = true)
+    @Column(name = "size")
     public int getSize() {
         return size;
     }
@@ -123,7 +122,7 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "weight", nullable = false, insertable = true, updatable = true)
+    @Column(name = "weight")
     public int getWeight() {
         return weight;
     }
@@ -133,23 +132,13 @@ public class VariantEntity {
     }
 
     @Basic
-    @Column(name = "capacity", nullable = false, insertable = true, updatable = true)
+    @Column(name = "capacity")
     public int getCapacity() {
         return capacity;
     }
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
-    }
-
-    @Basic
-    @Column(name = "ratings", nullable = false, insertable = true, updatable = true)
-    public int getRatings() {
-        return ratings;
-    }
-
-    public void setRatings(int ratings) {
-        this.ratings = ratings;
     }
 
     @Override
@@ -166,7 +155,6 @@ public class VariantEntity {
         if (size != that.size) return false;
         if (weight != that.weight) return false;
         if (capacity != that.capacity) return false;
-        if (ratings != that.ratings) return false;
         if (thumbnailUri != null ? !thumbnailUri.equals(that.thumbnailUri) : that.thumbnailUri != null) return false;
         if (imageUri != null ? !imageUri.equals(that.imageUri) : that.imageUri != null) return false;
         if (color != null ? !color.equals(that.color) : that.color != null) return false;
@@ -190,7 +178,6 @@ public class VariantEntity {
         result = 31 * result + size;
         result = 31 * result + weight;
         result = 31 * result + capacity;
-        result = 31 * result + ratings;
         return result;
     }
 }

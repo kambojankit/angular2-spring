@@ -18,7 +18,7 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/</prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
             </props>
         </property>
@@ -36,6 +36,10 @@
                 <value>com.techarha.java.manin.domain.ShipmentsEntity</value>
                 <value>com.techarha.java.manin.domain.UserEntity</value>
                 <value>com.techarha.java.manin.domain.VariantEntity</value>
+                <value>com.techarha.java.manin.domain.BillDetailsEntity</value>
+                <value>com.techarha.java.manin.domain.FlipkartOrderEntity</value>
+                <value>com.techarha.java.manin.domain.FlipkartTransEntity</value>
+                <value>com.techarha.java.manin.domain.ProcurementDetailsEntity</value>
             </list>
         </property>
     </bean>

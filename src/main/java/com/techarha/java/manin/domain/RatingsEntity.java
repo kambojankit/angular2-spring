@@ -3,7 +3,7 @@ package com.techarha.java.manin.domain;
 import javax.persistence.*;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "ratings", schema = "", catalog = "manin")
@@ -13,9 +13,10 @@ public class RatingsEntity {
     private String comment;
     private String userName;
     private String userEmail;
+    private Integer variantId;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -25,7 +26,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "score", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "score")
     public String getScore() {
         return score;
     }
@@ -35,7 +36,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "comment", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "comment")
     public String getComment() {
         return comment;
     }
@@ -45,7 +46,7 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "user_name", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "user_name")
     public String getUserName() {
         return userName;
     }
@@ -55,13 +56,23 @@ public class RatingsEntity {
     }
 
     @Basic
-    @Column(name = "user_email", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "user_email")
     public String getUserEmail() {
         return userEmail;
     }
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    @Basic
+    @Column(name = "variant_id")
+    public Integer getVariantId() {
+        return variantId;
+    }
+
+    public void setVariantId(Integer variantId) {
+        this.variantId = variantId;
     }
 
     @Override
@@ -76,6 +87,7 @@ public class RatingsEntity {
         if (comment != null ? !comment.equals(that.comment) : that.comment != null) return false;
         if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
         if (userEmail != null ? !userEmail.equals(that.userEmail) : that.userEmail != null) return false;
+        if (variantId != null ? !variantId.equals(that.variantId) : that.variantId != null) return false;
 
         return true;
     }
@@ -87,6 +99,7 @@ public class RatingsEntity {
         result = 31 * result + (comment != null ? comment.hashCode() : 0);
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         result = 31 * result + (userEmail != null ? userEmail.hashCode() : 0);
+        result = 31 * result + (variantId != null ? variantId.hashCode() : 0);
         return result;
     }
 }

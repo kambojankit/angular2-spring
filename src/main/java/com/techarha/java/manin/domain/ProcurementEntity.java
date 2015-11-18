@@ -1,78 +1,80 @@
 package com.techarha.java.manin.domain;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
-@Table(name = "Procurement", schema = "", catalog = "manin")
+@Table(name = "procurement", schema = "", catalog = "manin")
 public class ProcurementEntity {
-    private int id;
-    private String billNumber;
-    private String billDate;
-    private String billImageAlbumUri;
-    private String billAmount;
-    private String shipCharges;
+    private int billId;
+    private Timestamp billDate;
+    private BigDecimal paymentDue;
+    private Timestamp paymentDueDate;
+    private String freightChargesPaid;
+    private String vendor;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
-    public int getId() {
-        return id;
+    @Column(name = "bill_id")
+    public int getBillId() {
+        return billId;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Basic
-    @Column(name = "bill_number", nullable = true, insertable = true, updatable = true, length = 45)
-    public String getBillNumber() {
-        return billNumber;
-    }
-
-    public void setBillNumber(String billNumber) {
-        this.billNumber = billNumber;
+    public void setBillId(int billId) {
+        this.billId = billId;
     }
 
     @Basic
-    @Column(name = "bill_date", nullable = true, insertable = true, updatable = true, length = 45)
-    public String getBillDate() {
+    @Column(name = "bill_date")
+    public Timestamp getBillDate() {
         return billDate;
     }
 
-    public void setBillDate(String billDate) {
+    public void setBillDate(Timestamp billDate) {
         this.billDate = billDate;
     }
 
     @Basic
-    @Column(name = "bill_image_album_uri", nullable = true, insertable = true, updatable = true, length = 45)
-    public String getBillImageAlbumUri() {
-        return billImageAlbumUri;
+    @Column(name = "payment_due")
+    public BigDecimal getPaymentDue() {
+        return paymentDue;
     }
 
-    public void setBillImageAlbumUri(String billImageAlbumUri) {
-        this.billImageAlbumUri = billImageAlbumUri;
-    }
-
-    @Basic
-    @Column(name = "bill_amount", nullable = true, insertable = true, updatable = true, length = 45)
-    public String getBillAmount() {
-        return billAmount;
-    }
-
-    public void setBillAmount(String billAmount) {
-        this.billAmount = billAmount;
+    public void setPaymentDue(BigDecimal paymentDue) {
+        this.paymentDue = paymentDue;
     }
 
     @Basic
-    @Column(name = "ship_charges", nullable = true, insertable = true, updatable = true, length = 45)
-    public String getShipCharges() {
-        return shipCharges;
+    @Column(name = "payment_due_date")
+    public Timestamp getPaymentDueDate() {
+        return paymentDueDate;
     }
 
-    public void setShipCharges(String shipCharges) {
-        this.shipCharges = shipCharges;
+    public void setPaymentDueDate(Timestamp paymentDueDate) {
+        this.paymentDueDate = paymentDueDate;
+    }
+
+    @Basic
+    @Column(name = "freight_charges_paid")
+    public String getFreightChargesPaid() {
+        return freightChargesPaid;
+    }
+
+    public void setFreightChargesPaid(String freightChargesPaid) {
+        this.freightChargesPaid = freightChargesPaid;
+    }
+
+    @Basic
+    @Column(name = "vendor")
+    public String getVendor() {
+        return vendor;
+    }
+
+    public void setVendor(String vendor) {
+        this.vendor = vendor;
     }
 
     @Override
@@ -82,25 +84,26 @@ public class ProcurementEntity {
 
         ProcurementEntity that = (ProcurementEntity) o;
 
-        if (id != that.id) return false;
-        if (billNumber != null ? !billNumber.equals(that.billNumber) : that.billNumber != null) return false;
+        if (billId != that.billId) return false;
         if (billDate != null ? !billDate.equals(that.billDate) : that.billDate != null) return false;
-        if (billImageAlbumUri != null ? !billImageAlbumUri.equals(that.billImageAlbumUri) : that.billImageAlbumUri != null)
+        if (paymentDue != null ? !paymentDue.equals(that.paymentDue) : that.paymentDue != null) return false;
+        if (paymentDueDate != null ? !paymentDueDate.equals(that.paymentDueDate) : that.paymentDueDate != null)
             return false;
-        if (billAmount != null ? !billAmount.equals(that.billAmount) : that.billAmount != null) return false;
-        if (shipCharges != null ? !shipCharges.equals(that.shipCharges) : that.shipCharges != null) return false;
+        if (freightChargesPaid != null ? !freightChargesPaid.equals(that.freightChargesPaid) : that.freightChargesPaid != null)
+            return false;
+        if (vendor != null ? !vendor.equals(that.vendor) : that.vendor != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (billNumber != null ? billNumber.hashCode() : 0);
+        int result = billId;
         result = 31 * result + (billDate != null ? billDate.hashCode() : 0);
-        result = 31 * result + (billImageAlbumUri != null ? billImageAlbumUri.hashCode() : 0);
-        result = 31 * result + (billAmount != null ? billAmount.hashCode() : 0);
-        result = 31 * result + (shipCharges != null ? shipCharges.hashCode() : 0);
+        result = 31 * result + (paymentDue != null ? paymentDue.hashCode() : 0);
+        result = 31 * result + (paymentDueDate != null ? paymentDueDate.hashCode() : 0);
+        result = 31 * result + (freightChargesPaid != null ? freightChargesPaid.hashCode() : 0);
+        result = 31 * result + (vendor != null ? vendor.hashCode() : 0);
         return result;
     }
 }

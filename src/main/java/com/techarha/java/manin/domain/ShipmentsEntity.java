@@ -3,7 +3,7 @@ package com.techarha.java.manin.domain;
 import javax.persistence.*;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "shipments", schema = "", catalog = "manin")
@@ -17,7 +17,7 @@ public class ShipmentsEntity {
     private String shipToUserId;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "tracking_number", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "tracking_number")
     public String getTrackingNumber() {
         return trackingNumber;
     }
@@ -37,7 +37,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "shipment_vendor", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "shipment_vendor")
     public String getShipmentVendor() {
         return shipmentVendor;
     }
@@ -47,7 +47,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "shipment_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "shipment_date")
     public String getShipmentDate() {
         return shipmentDate;
     }
@@ -57,7 +57,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "delivery_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "delivery_date")
     public String getDeliveryDate() {
         return deliveryDate;
     }
@@ -67,7 +67,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "shipment_type", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "shipment_type")
     public String getShipmentType() {
         return shipmentType;
     }
@@ -77,7 +77,7 @@ public class ShipmentsEntity {
     }
 
     @Basic
-    @Column(name = "ship_to_user_id", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "ship_to_user_id")
     public String getShipToUserId() {
         return shipToUserId;
     }

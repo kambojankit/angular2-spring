@@ -3,7 +3,7 @@ package com.techarha.java.manin.domain;
 import javax.persistence.*;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "Inventory", schema = "", catalog = "manin")
@@ -13,7 +13,7 @@ public class InventoryEntity {
     private int quantity;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class InventoryEntity {
     }
 
     @Basic
-    @Column(name = "variant_id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "variant_id")
     public int getVariantId() {
         return variantId;
     }
@@ -33,7 +33,7 @@ public class InventoryEntity {
     }
 
     @Basic
-    @Column(name = "quantity", nullable = false, insertable = true, updatable = true)
+    @Column(name = "quantity")
     public int getQuantity() {
         return quantity;
     }

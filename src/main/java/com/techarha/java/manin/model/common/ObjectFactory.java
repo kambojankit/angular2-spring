@@ -38,6 +38,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link BasicUserType }
+     * 
+     */
+    public BasicUserType createBasicUserType() {
+        return new BasicUserType();
+    }
+
+    /**
+     * Create an instance of {@link NameType }
+     * 
+     */
+    public NameType createNameType() {
+        return new NameType();
+    }
+
+    /**
+     * Create an instance of {@link AddressType }
+     * 
+     */
+    public AddressType createAddressType() {
+        return new AddressType();
+    }
+
+    /**
+     * Create an instance of {@link PriceType.Price }
+     * 
+     */
+    public PriceType.Price createPriceTypePrice() {
+        return new PriceType.Price();
+    }
+
+    /**
+     * Create an instance of {@link ResponseType }
+     * 
+     */
+    public ResponseType createResponseType() {
+        return new ResponseType();
+    }
+
+    /**
      * Create an instance of {@link SizeType }
      * 
      */
@@ -67,46 +107,6 @@ public class ObjectFactory {
      */
     public PingResponse createPingResponse() {
         return new PingResponse();
-    }
-
-    /**
-     * Create an instance of {@link PriceType.Price }
-     * 
-     */
-    public PriceType.Price createPriceTypePrice() {
-        return new PriceType.Price();
-    }
-
-    /**
-     * Create an instance of {@link ResponseType }
-     * 
-     */
-    public ResponseType createResponseType() {
-        return new ResponseType();
-    }
-
-    /**
-     * Create an instance of {@link NameType }
-     * 
-     */
-    public NameType createNameType() {
-        return new NameType();
-    }
-
-    /**
-     * Create an instance of {@link BasicUserType }
-     * 
-     */
-    public BasicUserType createBasicUserType() {
-        return new BasicUserType();
-    }
-
-    /**
-     * Create an instance of {@link AddressType }
-     * 
-     */
-    public AddressType createAddressType() {
-        return new AddressType();
     }
 
 }

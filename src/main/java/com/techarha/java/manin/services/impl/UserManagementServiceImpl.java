@@ -20,10 +20,6 @@ public class UserManagementServiceImpl implements UserManagementService {
     @Qualifier("userManagerController")
     private UserController userController;
 
-    @Autowired
-    @Qualifier("userManagerDao")
-    UserManagerDao userManagerDao;
-
     @Override
     public AddUserResponse addUser(AddUserRequest addUserRequest) {
 

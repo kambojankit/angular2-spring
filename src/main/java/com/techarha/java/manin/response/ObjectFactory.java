@@ -30,6 +30,102 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FlipkartPaymentsResponse }
+     * 
+     */
+    public FlipkartPaymentsResponse createFlipkartPaymentsResponse() {
+        return new FlipkartPaymentsResponse();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartOrdersResponse }
+     * 
+     */
+    public FlipkartOrdersResponse createFlipkartOrdersResponse() {
+        return new FlipkartOrdersResponse();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartPaymentsResponse.TransactionDetails }
+     * 
+     */
+    public FlipkartPaymentsResponse.TransactionDetails createFlipkartPaymentsResponseTransactionDetails() {
+        return new FlipkartPaymentsResponse.TransactionDetails();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartOrdersResponse.OrderDetails }
+     * 
+     */
+    public FlipkartOrdersResponse.OrderDetails createFlipkartOrdersResponseOrderDetails() {
+        return new FlipkartOrdersResponse.OrderDetails();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartPricing }
+     * 
+     */
+    public FlipkartPricing createFlipkartPricing() {
+        return new FlipkartPricing();
+    }
+
+    /**
+     * Create an instance of {@link RemoveUserResponse }
+     * 
+     */
+    public RemoveUserResponse createRemoveUserResponse() {
+        return new RemoveUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddUserResponse }
+     * 
+     */
+    public AddUserResponse createAddUserResponse() {
+        return new AddUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllUsersResponse }
+     * 
+     */
+    public GetAllUsersResponse createGetAllUsersResponse() {
+        return new GetAllUsersResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetUserDetailsResponse }
+     * 
+     */
+    public GetUserDetailsResponse createGetUserDetailsResponse() {
+        return new GetUserDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUserDetailsResponse }
+     * 
+     */
+    public UpdateUserDetailsResponse createUpdateUserDetailsResponse() {
+        return new UpdateUserDetailsResponse();
+    }
+
+    /**
+     * Create an instance of {@link PingUserResponse }
+     * 
+     */
+    public PingUserResponse createPingUserResponse() {
+        return new PingUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link StockResponse }
+     * 
+     */
+    public StockResponse createStockResponse() {
+        return new StockResponse();
+    }
+
+    /**
      * Create an instance of {@link GetVariantDetailsResponse }
      * 
      */
@@ -83,62 +179,6 @@ public class ObjectFactory {
      */
     public UpdateProductDetailsResponse createUpdateProductDetailsResponse() {
         return new UpdateProductDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link StockResponse }
-     * 
-     */
-    public StockResponse createStockResponse() {
-        return new StockResponse();
-    }
-
-    /**
-     * Create an instance of {@link RemoveUserResponse }
-     * 
-     */
-    public RemoveUserResponse createRemoveUserResponse() {
-        return new RemoveUserResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddUserResponse }
-     * 
-     */
-    public AddUserResponse createAddUserResponse() {
-        return new AddUserResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetAllUsersResponse }
-     * 
-     */
-    public GetAllUsersResponse createGetAllUsersResponse() {
-        return new GetAllUsersResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetUserDetailsResponse }
-     * 
-     */
-    public GetUserDetailsResponse createGetUserDetailsResponse() {
-        return new GetUserDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateUserDetailsResponse }
-     * 
-     */
-    public UpdateUserDetailsResponse createUpdateUserDetailsResponse() {
-        return new UpdateUserDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link PingUserResponse }
-     * 
-     */
-    public PingUserResponse createPingUserResponse() {
-        return new PingUserResponse();
     }
 
 }

@@ -11,7 +11,7 @@
 
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
-    <import resource="classpath:hibernate/hibernate.xml"/>
+    <import resource="classpath:base-context.xml"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:db.properties"/>
@@ -24,20 +24,20 @@
     </cxf:bus>
 
     <bean id="ManageProductsService" class="com.techarha.java.manin.services.impl.ManageProductServiceImpl"/>
-
+    <bean id="ManageFlipkartService" class="com.techarha.java.manin.services.impl.FlipkartManagementServiceImpl"/>
     <bean id="UserManagementService" class="com.techarha.java.manin.services.impl.UserManagementServiceImpl"/>
 
     <bean id="jsonProvider"
           class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
 
-    <!--<jaxrs:server id="userManagerREST" address="/UserManager">-->
-        <!--<jaxrs:serviceBeans>-->
-            <!--<ref bean="userManagerService"/>-->
-        <!--</jaxrs:serviceBeans>-->
-        <!--<jaxrs:providers>-->
-            <!--<ref bean='jsonProvider' />-->
-        <!--</jaxrs:providers>-->
-    <!--</jaxrs:server>-->
+    <jaxrs:server id="userManagerREST" address="/marketplace">
+        <jaxrs:serviceBeans>
+            <ref bean="ManageFlipkartService"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean='jsonProvider' />
+        </jaxrs:providers>
+    </jaxrs:server>
 
     <jaxrs:server id="productManagerREST" address="/managers">
         <jaxrs:serviceBeans>

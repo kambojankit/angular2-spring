@@ -34,8 +34,8 @@ import com.techarha.java.manin.response.PingUserResponse;
     "result"
 })
 @XmlSeeAlso({
-    PingUserResponse.class,
-    PingProductResponse.class
+    PingProductResponse.class,
+    PingUserResponse.class
 })
 public class PingResponse {
 

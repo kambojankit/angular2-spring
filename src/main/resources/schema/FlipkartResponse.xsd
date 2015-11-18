@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns="http://www.techarha.com/schema/xsd/manin/FlipkartResponse"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:cmn="http://www.techarha.com/schema/xsd/common/CommonTypes"
+            targetNamespace="http://www.techarha.com/schema/xsd/manin/FlipkartResponse"
+            elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.techarha.com/schema/xsd/common/CommonTypes" schemaLocation="CommonTypes.xsd"/>
+
+    <xs:element name="FlipkartOrdersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="orderDetails" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="orderedOn" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="productName" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="fsn" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="hasOffer" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="orderId" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="primaryOrderItemId" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="orderItemId" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="orderType" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="skuCode" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="orderState" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="sellingPricePerItem" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="shippingChargePerItem" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="octroiFeePerItem" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="emiFeePerItem" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="quantity" minOccurs="1" maxOccurs="1" type="xs:int"/>
+                            <xs:element name="totalAmount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="invoiceNo" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="invoiceAmount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="invoiceDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                            <xs:element name="vatExclusiveOthersTax" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="buyerName" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="shipToName" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="addressLine1" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="addressLine2" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="city" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="state" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="pincode" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="procSla" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="dispatchAfterDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                            <xs:element name="rtdDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                            <xs:element name="formRequired" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="shipmentWeight" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                            <xs:element name="shipmentStatus" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="trackingId" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="sellerBuyerInvoiceNo" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="imei" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                            <xs:element name="returnDisputeTickets" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="FlipkartPaymentsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="transactionDetails" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="orderId" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="orderItemId" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="FSN" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="orderDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="invoiceDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="dispatch" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="shipDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="deliveryDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="cancellationDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="settlementDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+                                <xs:element name="orderState" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="orderStatusTrans" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="quantityTrans" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="productName" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="SKU" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="sellingPrice" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                                <xs:element name="shippingCharges" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                                <xs:element name="totalInvoiceAmount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+                                <xs:element name="settlementRefNo" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="orderType" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                <xs:element name="orderPricing" minOccurs="1" maxOccurs="1" type="FlipkartPricing"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="FlipkartPricing">
+        <xs:sequence>
+            <xs:element name="orderItemValue" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="saleTransactionAmount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="discountTransactionAmount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="refund" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="protectionFund" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="totalMarketplaceFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="serviceTax" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="settlementValue" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="commissionRate" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="commission" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="paymentRate" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="paymentFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="feeDiscount" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="cancellationFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="fixedFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="emiFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="totalWeight" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="shippingFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="reverseShippingFee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="shippingZone" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="paymentfee" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="totalOffer" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="flipkartOffer" minOccurs="1" maxOccurs="1" type="xs:double"/>
+            <xs:element name="myShareOffer" minOccurs="1" maxOccurs="1" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

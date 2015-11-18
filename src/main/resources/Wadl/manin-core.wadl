@@ -4,6 +4,7 @@
              xmlns:pres="http://www.techarha.com/schema/xsd/manin/ProductResponse"
              xmlns:ureq="http://www.techarha.com/schema/xsd/manin/UserRequest"
              xmlns:ures="http://www.techarha.com/schema/xsd/manin/UserResponse"
+             xmlns:flip="http://www.techarha.com/schema/xsd/manin/FlipkartResponse"
              xmlns:ireq="http://www.techarha.com/schema/xsd/manin/InventoryRequest"
              xmlns:ires="http://www.techarha.com/schema/xsd/manin/InventoryResponse">
 
@@ -12,10 +13,44 @@
         <include href="../schema/InventoryResponse.xsd"/>
         <include href="../schema/UserRequest.xsd"/>
         <include href="../schema/UserResponse.xsd"/>
+        <include href="../schema/FlipkartResponse.xsd"/>
         <include href="../schema/ProductRequest.xsd"/>
         <include href="../schema/ProductResponse.xsd"/>
     </grammars>
     <resources base="http://localhost:8080/manin/api/">
+
+        <!-- ****************************************************************
+        ************************ Flipkart Management ***************************
+        *********************************************************************-->
+        <resource path="/ManageFlipkart" id="FlipkartManagementService">
+
+            <resource path="/getPayments">
+                <method name="GET" id="getPaymentsDetails">
+                    <doc xml:lang="en" title="Pulls all payments related data"/>
+                    <response>
+                        <representation mediaType="application/json" element="flip:FlipkartPaymentsResponse"/>
+                    </response>
+                </method>
+            </resource>
+
+            <resource path="/getOrders">
+                <method name="GET" id="getOrderDetails">
+                    <doc xml:lang="en" title="Pulls all Orders related data"/>
+                    <response>
+                        <representation mediaType="application/json" element="flip:FlipkartOrdersResponse"/>
+                    </response>
+                </method>
+            </resource>
+
+            <resource path="/pingFlipUser">
+                <method name="GET" id="pingFlipUser">
+                    <doc xml:lang="en" title="Ping if User service is live"/>
+                    <response>
+                        <representation mediaType="application/json" element="ures:pingUserResponse"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
 
         <!-- ****************************************************************
         ************************ Users Management ***************************

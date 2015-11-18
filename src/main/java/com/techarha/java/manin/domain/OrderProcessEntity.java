@@ -3,7 +3,7 @@ package com.techarha.java.manin.domain;
 import javax.persistence.*;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "order_process", schema = "", catalog = "manin")
@@ -17,7 +17,7 @@ public class OrderProcessEntity {
     private String manifestDate;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "receive_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "receive_date")
     public String getReceiveDate() {
         return receiveDate;
     }
@@ -37,7 +37,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "pack_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "pack_date")
     public String getPackDate() {
         return packDate;
     }
@@ -47,7 +47,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "dispatch_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "dispatch_date")
     public String getDispatchDate() {
         return dispatchDate;
     }
@@ -57,7 +57,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "delivery_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "delivery_date")
     public String getDeliveryDate() {
         return deliveryDate;
     }
@@ -67,7 +67,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "packaging_material", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "packaging_material")
     public String getPackagingMaterial() {
         return packagingMaterial;
     }
@@ -77,7 +77,7 @@ public class OrderProcessEntity {
     }
 
     @Basic
-    @Column(name = "manifest_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "manifest_date")
     public String getManifestDate() {
         return manifestDate;
     }

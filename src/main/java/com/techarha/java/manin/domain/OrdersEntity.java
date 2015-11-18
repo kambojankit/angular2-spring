@@ -3,7 +3,7 @@ package com.techarha.java.manin.domain;
 import javax.persistence.*;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "Orders", schema = "", catalog = "manin")
@@ -18,7 +18,7 @@ public class OrdersEntity {
     private int orderProcessId;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -28,7 +28,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "marketplace", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "marketplace")
     public String getMarketplace() {
         return marketplace;
     }
@@ -38,7 +38,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "marketplace_order_id", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "marketplace_order_id")
     public String getMarketplaceOrderId() {
         return marketplaceOrderId;
     }
@@ -48,7 +48,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "invoice_number", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "invoice_number")
     public String getInvoiceNumber() {
         return invoiceNumber;
     }
@@ -58,7 +58,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "variant_id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "variant_id")
     public int getVariantId() {
         return variantId;
     }
@@ -68,7 +68,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "shipment_id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "shipment_id")
     public int getShipmentId() {
         return shipmentId;
     }
@@ -78,7 +78,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "order_date", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "order_date")
     public String getOrderDate() {
         return orderDate;
     }
@@ -88,7 +88,7 @@ public class OrdersEntity {
     }
 
     @Basic
-    @Column(name = "order_process_id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "order_process_id")
     public int getOrderProcessId() {
         return orderProcessId;
     }

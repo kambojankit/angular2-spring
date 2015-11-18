@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
- * Created by ankit on 05/10/15.
+ * Created by ankit on 15/11/15.
  */
 @Entity
 @Table(name = "product", schema = "", catalog = "manin")
@@ -25,7 +25,7 @@ public class ProductEntity {
     private Integer createdBy;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -35,7 +35,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "department", nullable = true, insertable = true, updatable = true)
+    @Column(name = "department")
     public Integer getDepartment() {
         return department;
     }
@@ -45,7 +45,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "category", nullable = true, insertable = true, updatable = true)
+    @Column(name = "category")
     public Integer getCategory() {
         return category;
     }
@@ -55,7 +55,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "brand", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "brand")
     public String getBrand() {
         return brand;
     }
@@ -65,7 +65,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "thumbnail_uri", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "thumbnail_uri")
     public String getThumbnailUri() {
         return thumbnailUri;
     }
@@ -75,7 +75,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "image_uri", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "image_uri")
     public String getImageUri() {
         return imageUri;
     }
@@ -85,7 +85,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -95,7 +95,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "title", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "title")
     public String getTitle() {
         return title;
     }
@@ -105,7 +105,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "description", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "description")
     public String getDescription() {
         return description;
     }
@@ -115,7 +115,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "short_desc", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "short_desc")
     public String getShortDesc() {
         return shortDesc;
     }
@@ -125,7 +125,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "style", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "style")
     public String getStyle() {
         return style;
     }
@@ -135,7 +135,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "type", nullable = true, insertable = true, updatable = true, length = 45)
+    @Column(name = "type")
     public String getType() {
         return type;
     }
@@ -145,7 +145,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "created_at", nullable = true, insertable = true, updatable = true)
+    @Column(name = "created_at")
     public Timestamp getCreatedAt() {
         return createdAt;
     }
@@ -155,7 +155,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "created_by", nullable = true, insertable = true, updatable = true)
+    @Column(name = "created_by")
     public Integer getCreatedBy() {
         return createdBy;
     }

@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>manin</groupId>
+    <groupId>com.techarha.attacho</groupId>
     <artifactId>manin</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
@@ -95,6 +95,13 @@
             <version>${jackson.version}</version>
         </dependency>
 
+        <!-- Dozer mapper: to map domains to JAXB classes-->
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+
         <!-- Logging using SLF4J with Log4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -159,6 +166,26 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.connector}</version>
         </dependency>
+
+        <!-- Smooth CSV Reading and Writing-->
+        <!-- BeanIO dependency -->
+        <dependency>
+            <groupId>org.beanio</groupId>
+            <artifactId>beanio</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- StAX dependencies for JDK 1.5 users -->
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jsr173</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.stream</groupId>
+            <artifactId>sjsxp</artifactId>
+            <version>1.0.2</version>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -207,6 +234,7 @@
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryResponse=com.techarha.java.manin.response</schemaPackagename>
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserRequest=com.techarha.java.manin.request</schemaPackagename>
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserResponse=com.techarha.java.manin.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/FlipkartResponse=com.techarha.java.manin.response</schemaPackagename>
                                             </schemaPackagenames>
                                         </wadlOption>
                                     </wadlOptions>
@@ -230,7 +258,8 @@
                         <artifactId>maven-war-plugin</artifactId>
                         <version>2.1.1</version>
                         <configuration>
-                            <warName>${project.artifactId}-${project.version}</warName>
+                            <outputDirectory>target</outputDirectory>
+                            <warName>${project.artifactId}</warName>
                         </configuration>
                     </plugin>
 
@@ -261,6 +290,7 @@
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/InventoryResponse=com.techarha.java.manin.response</schemaPackagename>
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserRequest=com.techarha.java.manin.request</schemaPackagename>
                                                 <schemaPackagename>http://www.techarha.com/schema/xsd/manin/UserResponse=com.techarha.java.manin.response</schemaPackagename>
+                                                <schemaPackagename>http://www.techarha.com/schema/xsd/manin/FlipkartResponse=com.techarha.java.manin.response</schemaPackagename>
                                             </schemaPackagenames>
                                         </wadlOption>
                                     </wadlOptions>
