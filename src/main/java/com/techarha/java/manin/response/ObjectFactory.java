@@ -46,30 +46,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FlipkartPaymentsResponse.TransactionDetails }
-     * 
-     */
-    public FlipkartPaymentsResponse.TransactionDetails createFlipkartPaymentsResponseTransactionDetails() {
-        return new FlipkartPaymentsResponse.TransactionDetails();
-    }
-
-    /**
-     * Create an instance of {@link FlipkartOrdersResponse.OrderDetails }
-     * 
-     */
-    public FlipkartOrdersResponse.OrderDetails createFlipkartOrdersResponseOrderDetails() {
-        return new FlipkartOrdersResponse.OrderDetails();
-    }
-
-    /**
-     * Create an instance of {@link FlipkartPricing }
-     * 
-     */
-    public FlipkartPricing createFlipkartPricing() {
-        return new FlipkartPricing();
-    }
-
-    /**
      * Create an instance of {@link RemoveUserResponse }
      * 
      */
@@ -123,6 +99,30 @@ public class ObjectFactory {
      */
     public StockResponse createStockResponse() {
         return new StockResponse();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartPaymentsResponse.TransactionDetails }
+     * 
+     */
+    public FlipkartPaymentsResponse.TransactionDetails createFlipkartPaymentsResponseTransactionDetails() {
+        return new FlipkartPaymentsResponse.TransactionDetails();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartOrdersResponse.OrderDetails }
+     * 
+     */
+    public FlipkartOrdersResponse.OrderDetails createFlipkartOrdersResponseOrderDetails() {
+        return new FlipkartOrdersResponse.OrderDetails();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartPricing }
+     * 
+     */
+    public FlipkartPricing createFlipkartPricing() {
+        return new FlipkartPricing();
     }
 
     /**
