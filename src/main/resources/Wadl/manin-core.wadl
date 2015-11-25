@@ -33,6 +33,15 @@
                 </method>
             </resource>
 
+            <resource path="/getSettlementsData">
+                <method name="GET" id="getSettlementsData">
+                    <doc xml:lang="en" title="Pulls all Settlements related data"/>
+                    <response>
+                        <representation mediaType="application/json" element="flip:FlipkartSettlements"/>
+                    </response>
+                </method>
+            </resource>
+
             <resource path="/getOrders">
                 <method name="GET" id="getOrderDetails">
                     <doc xml:lang="en" title="Pulls all Orders related data"/>

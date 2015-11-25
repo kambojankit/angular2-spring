@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import com.techarha.java.manin.response.FlipkartOrdersResponse;
 import com.techarha.java.manin.response.FlipkartPaymentsResponse;
+import com.techarha.java.manin.response.FlipkartSettlements;
 import com.techarha.java.manin.response.PingUserResponse;
 
 @Path("/ManageFlipkart")
@@ -17,6 +18,11 @@ public interface FlipkartManagementService {
     @Produces("application/json")
     @Path("/getPayments")
     FlipkartPaymentsResponse getPaymentsDetails();
+
+    @GET
+    @Produces("application/json")
+    @Path("/getSettlementsData")
+    FlipkartSettlements getSettlementsData();
 
     @GET
     @Produces("application/json")

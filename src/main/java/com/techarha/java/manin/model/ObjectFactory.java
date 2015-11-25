@@ -54,19 +54,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ProductInfoType }
+     * Create an instance of {@link Variant }
      * 
      */
-    public ProductInfoType createProductInfoType() {
-        return new ProductInfoType();
-    }
-
-    /**
-     * Create an instance of {@link Product }
-     * 
-     */
-    public Product createProduct() {
-        return new Product();
+    public Variant createVariant() {
+        return new Variant();
     }
 
     /**
@@ -78,14 +70,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ProductCategoryType }
-     * 
-     */
-    public ProductCategoryType createProductCategoryType() {
-        return new ProductCategoryType();
-    }
-
-    /**
      * Create an instance of {@link ProductInventoryType }
      * 
      */
@@ -94,19 +78,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Product }
+     * 
+     */
+    public Product createProduct() {
+        return new Product();
+    }
+
+    /**
+     * Create an instance of {@link ProductInfoType }
+     * 
+     */
+    public ProductInfoType createProductInfoType() {
+        return new ProductInfoType();
+    }
+
+    /**
+     * Create an instance of {@link ProductCategoryType }
+     * 
+     */
+    public ProductCategoryType createProductCategoryType() {
+        return new ProductCategoryType();
+    }
+
+    /**
      * Create an instance of {@link VendorDetailsType }
      * 
      */
     public VendorDetailsType createVendorDetailsType() {
         return new VendorDetailsType();
-    }
-
-    /**
-     * Create an instance of {@link Variant }
-     * 
-     */
-    public Variant createVariant() {
-        return new Variant();
     }
 
 }

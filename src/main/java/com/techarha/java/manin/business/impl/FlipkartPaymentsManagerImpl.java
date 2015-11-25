@@ -5,9 +5,7 @@ import com.techarha.java.manin.dao.FlipkartOrdersDao;
 import com.techarha.java.manin.dao.FlipkartTransDao;
 import com.techarha.java.manin.domain.FlipkartOrderEntity;
 import com.techarha.java.manin.domain.FlipkartTransEntity;
-import com.techarha.java.manin.response.FlipkartOrdersResponse;
-import com.techarha.java.manin.response.FlipkartPaymentsResponse;
-import com.techarha.java.manin.response.FlipkartPricing;
+import com.techarha.java.manin.response.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -69,6 +67,89 @@ public class FlipkartPaymentsManagerImpl implements FlipkartPaymentsManager {
 
 
         return flipkartOrdersResponse;
+    }
+
+    @Override
+    public FlipkartSettlements getSettlementData() {
+
+        FlipkartSettlements flipkartSettlements = new FlipkartSettlements();
+
+        List<FlipkartOrderEntity> flipkartOrderEntities =  flipkartOrdersDao.getAllOrdersDetails();
+        List<FlipkartTransEntity> flipkartTransEntities =  flipkartTransDao.getAllTrasactionDetails();
+
+        for (FlipkartOrderEntity flipkartOrderEntity : flipkartOrderEntities){
+            FlipkartSettlements.Settlements settlements = new FlipkartSettlements.Settlements();
+            OrderData orderData = new OrderData();
+
+            orderData.setOrderId(flipkartOrderEntity.getOrderId());
+            orderData.setOrderType(flipkartOrderEntity.getOrderType());
+            orderData.setSkuCode(flipkartOrderEntity.getSkuCode());
+            orderData.setInvoiceAmount(Double.parseDouble(flipkartOrderEntity.getInvoiceAmount()));
+            orderData.setInvoiceNo(flipkartOrderEntity.getInvoiceNo());
+            orderData.setInvoiceDate(convertToGregorian(flipkartOrderEntity.getInvoiceDate()));
+            orderData.setOrderState(flipkartOrderEntity.getOrderState());
+            orderData.setQuantity(Integer.parseInt(flipkartOrderEntity.getQuantity()));
+            orderData.setSellingPricePerItem(Double.parseDouble(flipkartOrderEntity.getSellingPricePerItem()));
+            orderData.setShippingChargePerItem(Double.parseDouble(flipkartOrderEntity.getShippingChargePerItem()));
+            orderData.setShipmentStatus(flipkartOrderEntity.getShipmentStatus());
+            orderData.setTotalAmount(Double.parseDouble(flipkartOrderEntity.getTotalAmount()));
+
+            for(FlipkartTransEntity transEntity : flipkartTransEntities){
+                if(transEntity.getOrderId().equals(orderData.getOrderId())){
+                    TransData transData = new TransData();
+
+                    transData.setSettlementRefNo(transEntity.getSettlementRefNo());
+
+                    transData.setCancellationDate(convertToGregorian(transEntity.getCancellationDate()));
+                    transData.setDeliveryDate(convertToGregorian(transEntity.getDeliveryDate()));
+                    transData.setDispatchDate(convertToGregorian(transEntity.getDispatchDate()));
+                    transData.setInvoiceDate(convertToGregorian(transEntity.getInvoiceDate()));
+                    transData.setSettlementDate(convertToGregorian(transEntity.getSettlementDate()));
+
+                    transData.setInvoiceId(transEntity.getInvoiceId());
+                    transData.setOrderStatus(transEntity.getOrderStatus());
+                    transData.setOrderType(transEntity.getOrderType());
+                    transData.setQuantity(transEntity.getQuantity());
+
+                    FlipkartPricing flipkartPricing = new FlipkartPricing();
+
+                    flipkartPricing.setOrderItemValue(Double.parseDouble(transEntity.getOrderItemValue()));
+                    flipkartPricing.setSaleTransactionAmount(Double.parseDouble(transEntity.getSaleTransactionAmount()));
+                    flipkartPricing.setDiscountTransactionAmount(Double.parseDouble(transEntity.getDiscountTransactionAmount()));
+                    flipkartPricing.setRefund(Double.parseDouble(transEntity.getRefund()));
+                    flipkartPricing.setProtectionFund(Double.parseDouble(transEntity.getProtectionFund()));
+                    flipkartPricing.setTotalMarketplaceFee(Double.parseDouble(transEntity.getMarketplaceFee()));
+                    flipkartPricing.setServiceTax(Double.parseDouble(transEntity.getServiceTax()));
+                    flipkartPricing.setSettlementValue(Double.parseDouble(transEntity.getSettlementValue()));
+                    flipkartPricing.setCommissionRate(Double.parseDouble(transEntity.getCommissionRate()));
+                    flipkartPricing.setCommission(Double.parseDouble(transEntity.getCommissionAmount()));
+                    flipkartPricing.setPaymentRate(Double.parseDouble(transEntity.getPaymentRate()));
+                    flipkartPricing.setPaymentFee(Double.parseDouble(transEntity.getPaymentFee()));
+                    flipkartPricing.setFeeDiscount(Double.parseDouble(transEntity.getFeeDiscount()));
+                    flipkartPricing.setCancellationFee(Double.parseDouble(transEntity.getCancellationFee()));
+                    flipkartPricing.setFixedFee(Double.parseDouble(transEntity.getFixedFee()));
+                    flipkartPricing.setEmiFee(Double.parseDouble(transEntity.getEmiFee()));
+                    flipkartPricing.setTotalWeight(Double.parseDouble(transEntity.getTotalWeight()));
+                    flipkartPricing.setShippingFee(Double.parseDouble(transEntity.getShippingFee()));
+                    flipkartPricing.setReverseShippingFee(Double.parseDouble(transEntity.getReverseShippingFee()));
+                    flipkartPricing.setShippingZone(transEntity.getShippingZone());
+                    flipkartPricing.setPaymentFee(Double.parseDouble(transEntity.getPaymentFee()));
+                    flipkartPricing.setTotalOffer(Double.parseDouble(transEntity.getTotalOfferAmount()));
+                    flipkartPricing.setFlipkartOffer(Double.parseDouble(transEntity.getFlipkartOfferShare()));
+                    flipkartPricing.setMyShareOffer(Double.parseDouble(transEntity.getMyOfferShare()));
+
+                    transData.setOrderPricing(flipkartPricing);
+
+                    settlements.getTransData().add(transData);
+
+                }
+            }
+
+            settlements.setOrderData(orderData);
+            flipkartSettlements.getSettlements().add(settlements);
+        }
+
+        return flipkartSettlements;
     }
 
     private void mapOrdersData(FlipkartOrdersResponse.OrderDetails orderDetails, FlipkartOrderEntity entity){

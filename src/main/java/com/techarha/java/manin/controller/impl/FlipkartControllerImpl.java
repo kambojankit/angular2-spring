@@ -4,6 +4,7 @@ import com.techarha.java.manin.business.FlipkartPaymentsManager;
 import com.techarha.java.manin.controller.FlipkartController;
 import com.techarha.java.manin.response.FlipkartOrdersResponse;
 import com.techarha.java.manin.response.FlipkartPaymentsResponse;
+import com.techarha.java.manin.response.FlipkartSettlements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -26,5 +27,10 @@ public class FlipkartControllerImpl implements FlipkartController {
     @Override
     public FlipkartOrdersResponse getOrderDetails() {
         return flipkartPaymentsManager.getOrderDetails();
+    }
+
+    @Override
+    public FlipkartSettlements getSettlementData() {
+        return flipkartPaymentsManager.getSettlementData();
     }
 }
