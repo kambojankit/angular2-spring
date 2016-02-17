@@ -16,7 +16,8 @@ export const PROJECT_ROOT         = normalize(join(__dirname, '..'));
 export const ENV                  = getEnvironment();
 export const DEBUG                = argv['debug']       || false;
 export const DOCS_PORT            = argv['docs-port']   || 4003;
-export const APP_BASE             = argv['base']        || '/';
+export const APP_BASE             = argv['base']        || '/src/main/frontend';
+export const DIST_BASE             = argv['base']        || '/src/main';
 
 export const ENABLE_HOT_LOADING   = !!argv['hot-loader'];
 export const HOT_LOADER_PORT      = 5578;
@@ -25,16 +26,16 @@ export const BOOTSTRAP_MODULE     = ENABLE_HOT_LOADING ? 'hot_loader_main' : 'ma
 
 export const APP_TITLE            = 'My Angular2 App';
 
-export const APP_SRC              = 'src';
+export const APP_SRC              = `${APP_BASE}/src`;
 export const ASSETS_SRC           = `${APP_SRC}/assets`;
 
-export const TOOLS_DIR            = 'tools';
-export const DOCS_DEST            = 'docs';
-export const DIST_DIR             = 'dist';
-export const DEV_DEST             = `${DIST_DIR}/dev`;
-export const PROD_DEST            = `${DIST_DIR}/prod`;
+export const TOOLS_DIR            = `${APP_BASE}/tools`;
+export const DOCS_DEST            = `${APP_BASE}/docs`;
+export const DIST_DIR             = `${DIST_BASE}/webapp`;
+export const DEV_DEST             = `${DIST_DIR}`;
+export const PROD_DEST            = `${DIST_DIR}`;
 export const TMP_DIR              = `${DIST_DIR}/tmp`;
-export const APP_DEST             = `${DIST_DIR}/${ENV}`;
+export const APP_DEST             = `${DIST_DIR}`;
 export const CSS_DEST             = `${APP_DEST}/css`;
 export const JS_DEST              = `${APP_DEST}/js`;
 export const APP_ROOT             = ENV === 'dev' ? `${APP_BASE}${APP_DEST}/` : `${APP_BASE}`;
