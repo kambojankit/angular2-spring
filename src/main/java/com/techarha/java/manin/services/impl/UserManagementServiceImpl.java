@@ -1,7 +1,6 @@
 package com.techarha.java.manin.services.impl;
 
 import com.techarha.java.manin.controller.UserController;
-import com.techarha.java.manin.dao.UserManagerDao;
 import com.techarha.java.manin.request.AddUserRequest;
 import com.techarha.java.manin.request.GetUserDetailsRequest;
 import com.techarha.java.manin.request.RemoveUserRequest;
@@ -22,10 +21,8 @@ public class UserManagementServiceImpl implements UserManagementService {
 
     @Override
     public AddUserResponse addUser(AddUserRequest addUserRequest) {
-
         //This layer should be responsible for forwarding the request to UserManagementController
         return userController.addUser(addUserRequest);
-
     }
 
     @Override

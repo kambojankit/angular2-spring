@@ -46,6 +46,54 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ProductInfoType }
+     * 
+     */
+    public ProductInfoType createProductInfoType() {
+        return new ProductInfoType();
+    }
+
+    /**
+     * Create an instance of {@link Product }
+     * 
+     */
+    public Product createProduct() {
+        return new Product();
+    }
+
+    /**
+     * Create an instance of {@link ProductDetailsType }
+     * 
+     */
+    public ProductDetailsType createProductDetailsType() {
+        return new ProductDetailsType();
+    }
+
+    /**
+     * Create an instance of {@link ProductCategoryType }
+     * 
+     */
+    public ProductCategoryType createProductCategoryType() {
+        return new ProductCategoryType();
+    }
+
+    /**
+     * Create an instance of {@link ProductInventoryType }
+     * 
+     */
+    public ProductInventoryType createProductInventoryType() {
+        return new ProductInventoryType();
+    }
+
+    /**
+     * Create an instance of {@link VendorDetailsType }
+     * 
+     */
+    public VendorDetailsType createVendorDetailsType() {
+        return new VendorDetailsType();
+    }
+
+    /**
      * Create an instance of {@link UID }
      * 
      */
@@ -59,54 +107,6 @@ public class ObjectFactory {
      */
     public Variant createVariant() {
         return new Variant();
-    }
-
-    /**
-     * Create an instance of {@link ProductDetailsType }
-     * 
-     */
-    public ProductDetailsType createProductDetailsType() {
-        return new ProductDetailsType();
-    }
-
-    /**
-     * Create an instance of {@link ProductInventoryType }
-     * 
-     */
-    public ProductInventoryType createProductInventoryType() {
-        return new ProductInventoryType();
-    }
-
-    /**
-     * Create an instance of {@link Product }
-     * 
-     */
-    public Product createProduct() {
-        return new Product();
-    }
-
-    /**
-     * Create an instance of {@link ProductInfoType }
-     * 
-     */
-    public ProductInfoType createProductInfoType() {
-        return new ProductInfoType();
-    }
-
-    /**
-     * Create an instance of {@link ProductCategoryType }
-     * 
-     */
-    public ProductCategoryType createProductCategoryType() {
-        return new ProductCategoryType();
-    }
-
-    /**
-     * Create an instance of {@link VendorDetailsType }
-     * 
-     */
-    public VendorDetailsType createVendorDetailsType() {
-        return new VendorDetailsType();
     }
 
 }

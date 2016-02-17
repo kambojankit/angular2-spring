@@ -1,0 +1,60 @@
+{
+  "settlements": [
+    {
+      "orderData": {
+        "orderId": "OD204061814180417000",
+        "orderType": "Non-FA",
+        "skuCode": "ABS-DFT-SF-REVV-PR-65",
+        "orderState": "Delivered",
+        "sellingPricePerItem": 2240.0,
+        "shippingChargePerItem": 40.0,
+        "quantity": 1,
+        "totalAmount": 2280.0,
+        "invoiceNo": "F0DA3CH16-30",
+        "invoiceAmount": 2280.0,
+        "invoiceDate": 1443830340000,
+        "shipmentStatus": "delivered"
+      },
+      "transData": [
+        {
+          "settlementRefNo": "NFT-151016072GN00279XXXXXXX",
+          "orderType": "prepaid",
+          "invoiceDate": 1443830340000,
+          "dispatchDate": 1444003140000,
+          "deliveryDate": 1444348740000,
+          "cancellationDate": null,
+          "settlementDate": 1444953540000,
+          "orderStatus": "delivered",
+          "quantity": "1",
+          "invoiceId": "F0DA3CH16-30",
+          "orderPricing": {
+            "orderItemValue": 2280.0,
+            "saleTransactionAmount": 2280.0,
+            "discountTransactionAmount": 0.0,
+            "refund": 0.0,
+            "protectionFund": 0.0,
+            "totalMarketplaceFee": -512.0,
+            "serviceTax": -71.68,
+            "settlementValue": 1696.32,
+            "commissionRate": 12.5,
+            "commission": -285.0,
+            "paymentRate": 2.5,
+            "paymentFee": -57.0,
+            "feeDiscount": 0.0,
+            "cancellationFee": 0.0,
+            "fixedFee": -10.0,
+            "emiFee": 0.0,
+            "totalWeight": 2.23,
+            "shippingFee": -160.0,
+            "reverseShippingFee": 0.0,
+            "shippingZone": "ZONAL",
+            "paymentfee": 0.0,
+            "totalOffer": 0.0,
+            "flipkartOffer": 0.0,
+            "myShareOffer": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

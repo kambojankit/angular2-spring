@@ -54,6 +54,62 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FlipkartSettlements.Settlements }
+     * 
+     */
+    public FlipkartSettlements.Settlements createFlipkartSettlementsSettlements() {
+        return new FlipkartSettlements.Settlements();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartPaymentsResponse.TransactionDetails }
+     * 
+     */
+    public FlipkartPaymentsResponse.TransactionDetails createFlipkartPaymentsResponseTransactionDetails() {
+        return new FlipkartPaymentsResponse.TransactionDetails();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartOrdersResponse.OrderDetails }
+     * 
+     */
+    public FlipkartOrdersResponse.OrderDetails createFlipkartOrdersResponseOrderDetails() {
+        return new FlipkartOrdersResponse.OrderDetails();
+    }
+
+    /**
+     * Create an instance of {@link OrderData }
+     * 
+     */
+    public OrderData createOrderData() {
+        return new OrderData();
+    }
+
+    /**
+     * Create an instance of {@link FlipkartPricing }
+     * 
+     */
+    public FlipkartPricing createFlipkartPricing() {
+        return new FlipkartPricing();
+    }
+
+    /**
+     * Create an instance of {@link TransData }
+     * 
+     */
+    public TransData createTransData() {
+        return new TransData();
+    }
+
+    /**
+     * Create an instance of {@link StockResponse }
+     * 
+     */
+    public StockResponse createStockResponse() {
+        return new StockResponse();
+    }
+
+    /**
      * Create an instance of {@link RemoveUserResponse }
      * 
      */
@@ -155,62 +211,6 @@ public class ObjectFactory {
      */
     public UpdateProductDetailsResponse createUpdateProductDetailsResponse() {
         return new UpdateProductDetailsResponse();
-    }
-
-    /**
-     * Create an instance of {@link FlipkartSettlements.Settlements }
-     * 
-     */
-    public FlipkartSettlements.Settlements createFlipkartSettlementsSettlements() {
-        return new FlipkartSettlements.Settlements();
-    }
-
-    /**
-     * Create an instance of {@link FlipkartPaymentsResponse.TransactionDetails }
-     * 
-     */
-    public FlipkartPaymentsResponse.TransactionDetails createFlipkartPaymentsResponseTransactionDetails() {
-        return new FlipkartPaymentsResponse.TransactionDetails();
-    }
-
-    /**
-     * Create an instance of {@link FlipkartOrdersResponse.OrderDetails }
-     * 
-     */
-    public FlipkartOrdersResponse.OrderDetails createFlipkartOrdersResponseOrderDetails() {
-        return new FlipkartOrdersResponse.OrderDetails();
-    }
-
-    /**
-     * Create an instance of {@link OrderData }
-     * 
-     */
-    public OrderData createOrderData() {
-        return new OrderData();
-    }
-
-    /**
-     * Create an instance of {@link FlipkartPricing }
-     * 
-     */
-    public FlipkartPricing createFlipkartPricing() {
-        return new FlipkartPricing();
-    }
-
-    /**
-     * Create an instance of {@link TransData }
-     * 
-     */
-    public TransData createTransData() {
-        return new TransData();
-    }
-
-    /**
-     * Create an instance of {@link StockResponse }
-     * 
-     */
-    public StockResponse createStockResponse() {
-        return new StockResponse();
     }
 
 }

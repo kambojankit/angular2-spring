@@ -41,7 +41,6 @@ public class FlipkartPaymentsManagerImpl implements FlipkartPaymentsManager {
     public FlipkartPaymentsResponse getPaymentDetails() {
         FlipkartPaymentsResponse flipkartPaymentsResponse = new FlipkartPaymentsResponse();
 
-
         List<FlipkartTransEntity> flipkartTransEntities =  flipkartTransDao.getAllTrasactionDetails();
 
         for(FlipkartTransEntity entity : flipkartTransEntities){
@@ -49,7 +48,6 @@ public class FlipkartPaymentsManagerImpl implements FlipkartPaymentsManager {
             mapTransData(transactionDetails, entity);
             flipkartPaymentsResponse.getTransactionDetails().add(transactionDetails);
         }
-
 
         return flipkartPaymentsResponse;
     }

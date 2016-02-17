@@ -62,22 +62,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddToStockRequest }
-     * 
-     */
-    public AddToStockRequest createAddToStockRequest() {
-        return new AddToStockRequest();
-    }
-
-    /**
-     * Create an instance of {@link RemoveFromStockRequest }
-     * 
-     */
-    public RemoveFromStockRequest createRemoveFromStockRequest() {
-        return new RemoveFromStockRequest();
-    }
-
-    /**
      * Create an instance of {@link UpdateProductDetailsRequest }
      * 
      */
@@ -115,6 +99,22 @@ public class ObjectFactory {
      */
     public UpdateVariantDetailsRequest createUpdateVariantDetailsRequest() {
         return new UpdateVariantDetailsRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddToStockRequest }
+     * 
+     */
+    public AddToStockRequest createAddToStockRequest() {
+        return new AddToStockRequest();
+    }
+
+    /**
+     * Create an instance of {@link RemoveFromStockRequest }
+     * 
+     */
+    public RemoveFromStockRequest createRemoveFromStockRequest() {
+        return new RemoveFromStockRequest();
     }
 
 }
